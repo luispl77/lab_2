@@ -71,7 +71,7 @@ architecture behavior of circuito_tb is
   signal clk,rst            : std_logic    := '0';
 
   --Outputs
-  signal addr  : std_logic_vector(3 downto 0);
+  signal addr  : std_logic_vector(9 downto 0);
   signal dataOUT : std_logic_vector(31 downto 0);
   signal Det_out : std_logic_vector(31 downto 0);
   signal  we,done   :  std_logic;

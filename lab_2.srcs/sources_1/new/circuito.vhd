@@ -41,7 +41,7 @@ architecture Behavioral of circuito is
 
         done     : out STD_LOGIC;
         we       : out STD_LOGIC;
-        addr     : out STD_LOGIC_VECTOR(3 downto 0);
+        addr     : out STD_LOGIC_VECTOR(4 downto 0);
 
         -- Control Signals for Datapath
         Mux_sel   : out STD_LOGIC_VECTOR(8 downto 0);
@@ -108,7 +108,7 @@ architecture Behavioral of circuito is
   --signal Det_o :  STD_LOGIC_VECTOR(31 downto 0);
   signal addrMSB : std_logic_vector(5 downto 0);
   
-  signal addr4bits : std_logic_vector (3 downto 0);
+  signal addr5bits : std_logic_vector (4 downto 0);
   signal sel3_concat : std_logic_vector (1 downto 0);
   signal sel5_concat : std_logic_vector (1 downto 0);
   signal sel6_concat : std_logic_vector (1 downto 0);
@@ -119,9 +119,9 @@ begin
   -- Circuito Logic
   ---------------------------------
   
-  addrMSB <= "000000" ;
-  addr (9 downto 4) <= addrMSB;
-  addr (3 downto 0) <= addr4bits;
+  addrMSB <= "00000" ;
+  addr (9 downto 5) <= addrMSB;
+  addr (4 downto 0) <= addr5bits;
   
   sel3_concat(1) <= Mux_sel(2);
   sel3_concat(0) <= Mux_sel(3);
@@ -143,7 +143,7 @@ begin
 
     done     =>  done,
     we       =>  we,
-    addr     =>  addr4bits,
+    addr     =>  addr5bits,
 
     -- Control Signals for Datapath
     Mux_sel   =>  Mux_sel,

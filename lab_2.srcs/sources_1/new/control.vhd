@@ -31,7 +31,7 @@ entity control is
 
         done     : out std_logic;
         we       : out std_logic;
-        addr     : out std_logic_vector(3 downto 0);
+        addr     : out std_logic_vector(4 downto 0);
 
         -- Control Signals for Datapath
         Mux_sel   : out std_logic_vector(8 downto 0);
@@ -42,11 +42,11 @@ end control;
 
 architecture Behavioral of control is
 
-    type state_type is (S_START, CYCLE1, CYCLE2, CYCLE3, CYCLE4, CYCLE5, S_DONE);
+    type state_type is (S_IDLE,S_START, CYCLE1, CYCLE2, CYCLE3, CYCLE4, CYCLE5, S_DONE);
     signal currstate, next_state : state_type;
 
     -- Counter to track iterations (N = 16)
-    signal counter,next_counter     : signed (3 downto 0):= (others => '0');
+    signal counter, next_counter     : signed (4 downto 0):= (others => '0');
 
 begin
 
@@ -54,19 +54,22 @@ begin
     state_reg : process (clk,reset)
     begin
         if clk'event and clk = '1' then
+        
             if reset = '1' then
                 currstate <= S_START;
                 counter     <= (others => '0');
-                next_counter     <= (others => '0');
             else
                 currstate <= next_state;
-                counter <= next_counter;
-            end if; 
+                counter  <= next_counter;
+            end if;
+            
+            addr        <= std_logic_vector(counter); 
+            
         end if;
     end process;
 
     -- State Logic
-    process(next_counter,counter,currstate,reset)
+    process(counter,currstate,reset)
     begin
         
         case currstate is
@@ -78,13 +81,16 @@ begin
                 enables     <= "0000";
                 we          <= '0';
                 done        <= '0';
-                addr        <= std_logic_vector(counter);
 
                 -- When the Reset turns off
                 if reset = '0' then
                     next_state <= CYCLE1;
+                    -- Counter
+                    next_counter <= "0000";
                 else
                     next_state <= S_START;
+                    -- Counter
+                    next_counter <= "0000";
                 end if;
 
             when CYCLE1 =>
@@ -94,10 +100,11 @@ begin
                 enables     <= "1101";
                 we          <= '0';
                 done        <= '0';
-                addr        <= std_logic_vector(counter);
-                next_counter <= counter;
 
                 next_state <= CYCLE2;
+                
+                -- Counter
+                next_counter <= counter;
 
             when CYCLE2 =>
 
@@ -106,10 +113,11 @@ begin
                 enables     <= "0110";
                 we          <= '0';
                 done        <= '0';
-                next_counter <= counter;
-                addr    <= std_logic_vector(counter);
 
                 next_state <= CYCLE3;
+                
+                -- Counter
+                next_counter <= counter;
 
             when CYCLE3 =>
 
@@ -118,10 +126,11 @@ begin
                 enables     <= "0011";
                 we          <= '0';
                 done        <= '0';
-                next_counter <= counter;
-                addr    <= std_logic_vector(counter);
 
                 next_state <= CYCLE4;
+                
+                -- Counter
+                next_counter <= counter;
 
             when CYCLE4 =>
 
@@ -130,10 +139,11 @@ begin
                 enables     <= "1000";
                 we          <= '0';
                 done        <= '0';
-                next_counter <= counter;
-                addr    <= std_logic_vector(counter);
 
                 next_state <= CYCLE5;
+                
+                -- Counter
+                next_counter <= counter;
 
             when CYCLE5 =>
 
@@ -143,16 +153,14 @@ begin
                 we          <= '1';
 
                 -- When all iterations are complete
-                if counter = "1000" then
+                if counter = "10000" then
                     done        <= '1';
                     next_state <= S_DONE;
-                    next_counter <= counter;
-                addr    <= std_logic_vector(counter);
                 else
                     done        <= '0';
-                    next_counter <= counter + 1;
-                addr    <= std_logic_vector(counter);
                     next_state <= CYCLE1;
+                
+                    next_counter <= counter + 1; --increment
                 end if;
 
             when S_DONE=>
@@ -162,12 +170,26 @@ begin
                 Mux_sel     <= "000000000";
                 enables     <= "0000";
                 we          <= '0';
-                counter       <= "0000";
                 done        <= '1';
-                next_counter <= counter;
-                addr    <= std_logic_vector(counter);
 
                 next_state <= S_DONE;
+                
+                -- Counter
+                next_counter <= counter;
+
+            when S_IDLE=>
+            
+                -- Default assignments
+                ALU_sel     <= '0';
+                Mux_sel     <= "000000000";
+                enables     <= "0000";
+                we          <= '0';
+                done        <= '0';
+
+                next_state <= S_IDLE;
+                
+                -- Counter
+                next_counter <= "0000";
 
             when others =>
 
@@ -176,12 +198,12 @@ begin
                 Mux_sel     <= "000000000";
                 enables     <= "0000";
                 we          <= '0';
-                counter       <= "0000";
                 done        <= '0';
-                next_counter <= counter;
-                addr    <= std_logic_vector(counter);
 
-                next_state <= S_START;
+                next_state <= S_IDLE;
+                
+                -- Counter
+                next_counter <= "0000";
 
         end case;
     end process;
