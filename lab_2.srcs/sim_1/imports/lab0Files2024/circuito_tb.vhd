@@ -44,7 +44,7 @@ architecture behavior of circuito_tb is
     port (
     clk, rst    : in  std_logic;
     we, done    : inout std_logic;
-    addr        : inout std_logic_vector(3 downto 0);
+    addr        : inout std_logic_vector(9 downto 0);
     dataOUT     : out std_logic_vector(31 downto 0);
     
     -- internal

@@ -8,12 +8,12 @@
   **** SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
   **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
   **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-  **** Start of session at: Wed Oct  9 15:59:18 2024
+  **** Start of session at: Wed Oct  9 16:20:28 2024
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 
 source circuito.tcl -notrace
-create_project: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 530.250 ; gain = 198.805
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 530.902 ; gain = 197.754
 Command: read_checkpoint -auto_incremental -incremental {C:/Users/minde/Ambiente de Trabalho/Proj SD/LAB/2/lab_2/lab_2.srcs/utils_1/imports/synth_1/circuito.dcp}
 INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/minde/Ambiente de Trabalho/Proj SD/LAB/2/lab_2/lab_2.srcs/utils_1/imports/synth_1/circuito.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
@@ -29,7 +29,7 @@ INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
 INFO: [Synth 8-7075] Helper process launched with PID 29992
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 1383.480 ; gain = 448.156
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1384.074 ; gain = 449.176
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'circuito' [C:/Users/minde/Ambiente de Trabalho/Proj SD/LAB/2/lab_2/lab_2.srcs/sources_1/new/circuito.vhd:36]
 INFO: [Synth 8-3491] module 'control' declared at 'C:/Users/minde/Ambiente de Trabalho/Proj SD/LAB/2/lab_2/lab_2.srcs/sources_1/new/control.vhd:27' bound to instance 'inst_control' of component 'control' [C:/Users/minde/Ambiente de Trabalho/Proj SD/LAB/2/lab_2/lab_2.srcs/sources_1/new/circuito.vhd:140]
@@ -1322,45 +1322,34 @@ INFO: [Synth 8-113] binding component instance 'ram36_bl' to cell 'RAMB36E1' [C:
 INFO: [Synth 8-256] done synthesizing module 'unimacro_BRAM_SINGLE_MACRO__parameterized2' (0#1) [C:/Xilinx/Vivado/2024.1/data/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhd:211]
 INFO: [Synth 8-256] done synthesizing module 'MemIN' (0#1) [C:/Users/minde/Ambiente de Trabalho/Proj SD/LAB/2/lab_2/lab_2.srcs/sources_1/new/memIN/memIN1new.vhd:28]
 INFO: [Synth 8-256] done synthesizing module 'circuito' (0#1) [C:/Users/minde/Ambiente de Trabalho/Proj SD/LAB/2/lab_2/lab_2.srcs/sources_1/new/circuito.vhd:36]
+WARNING: [Synth 8-3917] design circuito has port addr[9] driven by constant 0
+WARNING: [Synth 8-3917] design circuito has port addr[8] driven by constant 0
+WARNING: [Synth 8-3917] design circuito has port addr[7] driven by constant 0
+WARNING: [Synth 8-3917] design circuito has port addr[6] driven by constant 0
+WARNING: [Synth 8-3917] design circuito has port addr[5] driven by constant 0
+WARNING: [Synth 8-3917] design circuito has port addr[4] driven by constant 0
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:12 . Memory (MB): peak = 1497.727 ; gain = 562.402
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1497.625 ; gain = 562.727
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:12 . Memory (MB): peak = 1497.727 ; gain = 562.402
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1497.625 ; gain = 562.727
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:12 . Memory (MB): peak = 1497.727 ; gain = 562.402
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1497.625 ; gain = 562.727
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.020 . Memory (MB): peak = 1505.359 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1497.625 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-1115] Found multi-term driver net: <const0>.
 WARNING: [Netlist 29-1115] Found multi-term driver net: ALU_sel.
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
 Parsing XDC File [C:/Users/minde/Ambiente de Trabalho/Proj SD/LAB/2/lab_2/lab_2.srcs/constrs_1/imports/Ambiente de Trabalho/Lab2_Constraints.xdc]
-WARNING: [Vivado 12-584] No ports matched 'addr[9]'. [C:/Users/minde/Ambiente de Trabalho/Proj SD/LAB/2/lab_2/lab_2.srcs/constrs_1/imports/Ambiente de Trabalho/Lab2_Constraints.xdc:27]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/minde/Ambiente de Trabalho/Proj SD/LAB/2/lab_2/lab_2.srcs/constrs_1/imports/Ambiente de Trabalho/Lab2_Constraints.xdc:27]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'addr[8]'. [C:/Users/minde/Ambiente de Trabalho/Proj SD/LAB/2/lab_2/lab_2.srcs/constrs_1/imports/Ambiente de Trabalho/Lab2_Constraints.xdc:28]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/minde/Ambiente de Trabalho/Proj SD/LAB/2/lab_2/lab_2.srcs/constrs_1/imports/Ambiente de Trabalho/Lab2_Constraints.xdc:28]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'addr[7]'. [C:/Users/minde/Ambiente de Trabalho/Proj SD/LAB/2/lab_2/lab_2.srcs/constrs_1/imports/Ambiente de Trabalho/Lab2_Constraints.xdc:29]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/minde/Ambiente de Trabalho/Proj SD/LAB/2/lab_2/lab_2.srcs/constrs_1/imports/Ambiente de Trabalho/Lab2_Constraints.xdc:29]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'addr[6]'. [C:/Users/minde/Ambiente de Trabalho/Proj SD/LAB/2/lab_2/lab_2.srcs/constrs_1/imports/Ambiente de Trabalho/Lab2_Constraints.xdc:30]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/minde/Ambiente de Trabalho/Proj SD/LAB/2/lab_2/lab_2.srcs/constrs_1/imports/Ambiente de Trabalho/Lab2_Constraints.xdc:30]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'addr[5]'. [C:/Users/minde/Ambiente de Trabalho/Proj SD/LAB/2/lab_2/lab_2.srcs/constrs_1/imports/Ambiente de Trabalho/Lab2_Constraints.xdc:31]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/minde/Ambiente de Trabalho/Proj SD/LAB/2/lab_2/lab_2.srcs/constrs_1/imports/Ambiente de Trabalho/Lab2_Constraints.xdc:31]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'addr[4]'. [C:/Users/minde/Ambiente de Trabalho/Proj SD/LAB/2/lab_2/lab_2.srcs/constrs_1/imports/Ambiente de Trabalho/Lab2_Constraints.xdc:32]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/minde/Ambiente de Trabalho/Proj SD/LAB/2/lab_2/lab_2.srcs/constrs_1/imports/Ambiente de Trabalho/Lab2_Constraints.xdc:32]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 WARNING: [Vivado 12-584] No ports matched '[get_ports * -filter { NAME =~  "addr*" && DIRECTION == "OUT" }]'. [C:/Users/minde/Ambiente de Trabalho/Proj SD/LAB/2/lab_2/lab_2.srcs/constrs_1/imports/Ambiente de Trabalho/Lab2_Constraints.xdc:74]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/minde/Ambiente de Trabalho/Proj SD/LAB/2/lab_2/lab_2.srcs/constrs_1/imports/Ambiente de Trabalho/Lab2_Constraints.xdc:74]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
@@ -1369,35 +1358,46 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/circuito_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1564.473 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1497.625 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.022 . Memory (MB): peak = 1564.473 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1497.625 ; gain = 0.000
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:26 ; elapsed = 00:00:34 . Memory (MB): peak = 1564.473 ; gain = 629.148
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1497.625 ; gain = 562.727
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:26 ; elapsed = 00:00:34 . Memory (MB): peak = 1564.473 ; gain = 629.148
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1497.625 ; gain = 562.727
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:34 . Memory (MB): peak = 1564.473 ; gain = 629.148
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1497.625 ; gain = 562.727
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-327] inferring latch for variable 'counter_reg' [C:/Users/minde/Ambiente de Trabalho/Proj SD/LAB/2/lab_2/lab_2.srcs/sources_1/new/control.vhd:69]
-WARNING: [Synth 8-327] inferring latch for variable 'currstate_reg' [C:/Users/minde/Ambiente de Trabalho/Proj SD/LAB/2/lab_2/lab_2.srcs/sources_1/new/control.vhd:75]
-WARNING: [Synth 8-327] inferring latch for variable 'next_counter_reg' [C:/Users/minde/Ambiente de Trabalho/Proj SD/LAB/2/lab_2/lab_2.srcs/sources_1/new/control.vhd:99]
-WARNING: [Synth 8-327] inferring latch for variable 'next_state_reg' [C:/Users/minde/Ambiente de Trabalho/Proj SD/LAB/2/lab_2/lab_2.srcs/sources_1/new/control.vhd:62]
+INFO: [Synth 8-802] inferred FSM for state register 'currstate_reg' in module 'control'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 s_start |                              000 |                              000
+                  cycle1 |                              001 |                              001
+                  cycle2 |                              010 |                              010
+                  cycle3 |                              011 |                              011
+                  cycle4 |                              100 |                              100
+                  cycle5 |                              101 |                              101
+                  s_done |                              110 |                              110
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'currstate_reg' using encoding 'sequential' in module 'control'
+WARNING: [Synth 8-327] inferring latch for variable 'counter_reg' [C:/Users/minde/Ambiente de Trabalho/Proj SD/LAB/2/lab_2/lab_2.srcs/sources_1/new/control.vhd:81]
+WARNING: [Synth 8-327] inferring latch for variable 'next_counter_reg' [C:/Users/minde/Ambiente de Trabalho/Proj SD/LAB/2/lab_2/lab_2.srcs/sources_1/new/control.vhd:98]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:27 ; elapsed = 00:00:35 . Memory (MB): peak = 1564.473 ; gain = 629.148
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1497.625 ; gain = 562.727
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -1412,10 +1412,13 @@ Detailed RTL Component Info :
 +---Muxes : 
 	   4 Input   32 Bit        Muxes := 2     
 	   2 Input   32 Bit        Muxes := 6     
-	   8 Input    9 Bit        Muxes := 1     
-	   8 Input    4 Bit        Muxes := 2     
-	   2 Input    4 Bit        Muxes := 2     
-	   8 Input    1 Bit        Muxes := 5     
+	   7 Input    9 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 3     
+	   7 Input    4 Bit        Muxes := 3     
+	   7 Input    3 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 1     
+	   7 Input    1 Bit        Muxes := 4     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -1447,8 +1450,14 @@ DSP Report: operator inst_datapath/ARG is absorbed into DSP inst_datapath/ARG.
 DSP Report: Generating DSP inst_datapath/ARG, operation Mode is: (PCIN>>17)+A*B.
 DSP Report: operator inst_datapath/ARG is absorbed into DSP inst_datapath/ARG.
 DSP Report: operator inst_datapath/ARG is absorbed into DSP inst_datapath/ARG.
+WARNING: [Synth 8-3917] design circuito has port addr[9] driven by constant 0
+WARNING: [Synth 8-3917] design circuito has port addr[8] driven by constant 0
+WARNING: [Synth 8-3917] design circuito has port addr[7] driven by constant 0
+WARNING: [Synth 8-3917] design circuito has port addr[6] driven by constant 0
+WARNING: [Synth 8-3917] design circuito has port addr[5] driven by constant 0
+WARNING: [Synth 8-3917] design circuito has port addr[4] driven by constant 0
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:41 . Memory (MB): peak = 1564.473 ; gain = 629.148
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1497.625 ; gain = 562.727
 ---------------------------------------------------------------------------------
  Sort Area is  inst_datapath/ARG_2 : 0 0 : 2701 4861 : Used 1 time 0
  Sort Area is  inst_datapath/ARG_2 : 0 1 : 2160 4861 : Used 1 time 0
@@ -1478,13 +1487,13 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:44 ; elapsed = 00:00:56 . Memory (MB): peak = 1564.473 ; gain = 629.148
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1517.742 ; gain = 582.844
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:46 ; elapsed = 00:00:59 . Memory (MB): peak = 1564.473 ; gain = 629.148
+Finished Timing Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1556.730 ; gain = 621.832
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
@@ -1498,7 +1507,7 @@ WARNING: [Synth 8-3332] Sequential element (inst_control/next_counter_reg[2]) is
 WARNING: [Synth 8-3332] Sequential element (inst_control/next_counter_reg[1]) is unused and will be removed from module circuito.
 WARNING: [Synth 8-3332] Sequential element (inst_control/next_counter_reg[0]) is unused and will be removed from module circuito.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:47 ; elapsed = 00:01:00 . Memory (MB): peak = 1564.473 ; gain = 629.148
+Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1556.730 ; gain = 621.832
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -1516,50 +1525,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:57 ; elapsed = 00:01:11 . Memory (MB): peak = 1564.473 ; gain = 629.148
+Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1556.730 ; gain = 621.832
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:57 ; elapsed = 00:01:11 . Memory (MB): peak = 1564.473 ; gain = 629.148
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1556.730 ; gain = 621.832
 ---------------------------------------------------------------------------------
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin inst_control/currstate[2] with 1st driver pin 'inst_control/currstate_reg[2]__0/Q' [C:/Users/minde/Ambiente de Trabalho/Proj SD/LAB/2/lab_2/lab_2.srcs/sources_1/new/control.vhd:58]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin inst_control/currstate[2] with 2nd driver pin 'inst_control/currstate_reg[2]/Q' [C:/Users/minde/Ambiente de Trabalho/Proj SD/LAB/2/lab_2/lab_2.srcs/sources_1/new/control.vhd:75]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin inst_control/currstate[1] with 1st driver pin 'inst_control/currstate_reg[1]__0/Q' [C:/Users/minde/Ambiente de Trabalho/Proj SD/LAB/2/lab_2/lab_2.srcs/sources_1/new/control.vhd:58]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin inst_control/currstate[1] with 2nd driver pin 'inst_control/currstate_reg[1]/Q' [C:/Users/minde/Ambiente de Trabalho/Proj SD/LAB/2/lab_2/lab_2.srcs/sources_1/new/control.vhd:75]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin inst_control/currstate[0] with 1st driver pin 'inst_control/currstate_reg[0]__0/Q' [C:/Users/minde/Ambiente de Trabalho/Proj SD/LAB/2/lab_2/lab_2.srcs/sources_1/new/control.vhd:58]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin inst_control/currstate[0] with 2nd driver pin 'inst_control/currstate_reg[0]/Q' [C:/Users/minde/Ambiente de Trabalho/Proj SD/LAB/2/lab_2/lab_2.srcs/sources_1/new/control.vhd:75]
-
-Report Check Netlist: 
-+------+------------------+-------+---------+-------+------------------+
-|      |Item              |Errors |Warnings |Status |Description       |
-+------+------------------+-------+---------+-------+------------------+
-|1     |multi_driven_nets |      0|        3|Failed |Multi driven nets |
-+------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:57 ; elapsed = 00:01:12 . Memory (MB): peak = 1564.473 ; gain = 629.148
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1556.730 ; gain = 621.832
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:57 ; elapsed = 00:01:12 . Memory (MB): peak = 1564.473 ; gain = 629.148
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1556.730 ; gain = 621.832
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:57 ; elapsed = 00:01:12 . Memory (MB): peak = 1564.473 ; gain = 629.148
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1556.730 ; gain = 621.832
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:57 ; elapsed = 00:01:12 . Memory (MB): peak = 1564.473 ; gain = 629.148
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1556.730 ; gain = 621.832
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -1587,47 +1583,45 @@ Report Cell Usage:
 +------+---------+------+
 |      |Cell     |Count |
 +------+---------+------+
-|1     |BUF      |     2|
+|1     |BUF      |     1|
 |2     |BUFG     |     1|
 |3     |CARRY4   |    20|
 |4     |DSP48E1  |     5|
-|6     |LUT1     |     2|
-|7     |LUT2     |    71|
-|8     |LUT3     |   108|
-|9     |LUT4     |     3|
+|6     |LUT1     |     1|
+|7     |LUT2     |    76|
+|8     |LUT3     |   109|
+|9     |LUT4     |     1|
 |10    |LUT5     |    34|
 |11    |LUT6     |    78|
 |12    |RAMB36E1 |     4|
 |16    |FDRE     |   227|
-|17    |LD       |     6|
-|18    |IBUF     |     2|
-|19    |OBUF     |   308|
+|17    |IBUF     |     2|
+|18    |OBUF     |   314|
 +------+---------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:57 ; elapsed = 00:01:12 . Memory (MB): peak = 1564.473 ; gain = 629.148
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1556.730 ; gain = 621.832
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 6 critical warnings and 13 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:47 ; elapsed = 00:01:08 . Memory (MB): peak = 1564.473 ; gain = 562.402
-Synthesis Optimization Complete : Time (s): cpu = 00:00:58 ; elapsed = 00:01:12 . Memory (MB): peak = 1564.473 ; gain = 629.148
+Synthesis finished with 0 errors, 0 critical warnings and 17 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:23 . Memory (MB): peak = 1556.730 ; gain = 621.832
+Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1556.730 ; gain = 621.832
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.033 . Memory (MB): peak = 1564.473 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 37 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 1556.730 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 30 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1566.988 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1557.590 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 8 instances were transformed.
-  BUF => LUT1: 2 instances
-  LD => LDCE: 6 instances
+  A total of 1 instances were transformed.
+  BUF => LUT1: 1 instance 
 
-Synth Design complete | Checksum: 4414e1ba
+Synth Design complete | Checksum: 47fd18e3
 INFO: [Common 17-83] Releasing license: Synthesis
-54 Infos, 21 Warnings, 13 Critical Warnings and 0 Errors encountered.
+56 Infos, 26 Warnings, 1 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:03 ; elapsed = 00:01:19 . Memory (MB): peak = 1566.988 ; gain = 1032.117
+synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 1557.590 ; gain = 1022.363
 INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1566.988 ; gain = 0.000
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1557.590 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/minde/Ambiente de Trabalho/Proj SD/LAB/2/lab_2/lab_2.runs/synth_1/circuito.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file circuito_utilization_synth.rpt -pb circuito_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Oct  9 16:00:45 2024...
+INFO: [Common 17-206] Exiting Vivado at Wed Oct  9 16:21:04 2024...

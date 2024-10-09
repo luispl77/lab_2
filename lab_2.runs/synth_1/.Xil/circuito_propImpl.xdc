@@ -5,6 +5,8 @@ set_property src_info {type:XDC file:1 line:22 export:INPUT save:INPUT read:READ
 set_property PACKAGE_PIN D18 [get_ports rst]
 set_property src_info {type:XDC file:1 line:24 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN D17 [get_ports we]
+set_property src_info {type:XDC file:1 line:25 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN E19 [get_ports done]
 set_property src_info {type:XDC file:1 line:27 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN M1 [get_ports {addr[9]}]
 set_property src_info {type:XDC file:1 line:28 export:INPUT save:INPUT read:READ} [current_design]

@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-| Date         : Wed Oct  9 16:00:45 2024
+| Date         : Wed Oct  9 16:21:04 2024
 | Host         : Jaime running 64-bit major release  (build 9200)
 | Command      : report_utilization -file circuito_utilization_synth.rpt -pb circuito_utilization_synth.pb
 | Design       : circuito
@@ -31,12 +31,12 @@ Table of Contents
 +-------------------------+------+-------+------------+-----------+-------+
 |        Site Type        | Used | Fixed | Prohibited | Available | Util% |
 +-------------------------+------+-------+------------+-----------+-------+
-| Slice LUTs*             |  281 |     0 |          0 |     20800 |  1.35 |
-|   LUT as Logic          |  281 |     0 |          0 |     20800 |  1.35 |
+| Slice LUTs*             |  278 |     0 |          0 |     20800 |  1.34 |
+|   LUT as Logic          |  278 |     0 |          0 |     20800 |  1.34 |
 |   LUT as Memory         |    0 |     0 |          0 |      9600 |  0.00 |
-| Slice Registers         |  233 |     0 |          0 |     41600 |  0.56 |
+| Slice Registers         |  227 |     0 |          0 |     41600 |  0.55 |
 |   Register as Flip Flop |  227 |     0 |          0 |     41600 |  0.55 |
-|   Register as Latch     |    6 |     0 |          0 |     41600 |  0.01 |
+|   Register as Latch     |    0 |     0 |          0 |     41600 |  0.00 |
 | F7 Muxes                |    0 |     0 |          0 |     16300 |  0.00 |
 | F8 Muxes                |    0 |     0 |          0 |      8150 |  0.00 |
 +-------------------------+------+-------+------------+-----------+-------+
@@ -58,7 +58,7 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
-| 6     |          Yes |           - |        Reset |
+| 0     |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
 | 227   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
@@ -95,7 +95,7 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +-----------------------------+------+-------+------------+-----------+--------+
 |          Site Type          | Used | Fixed | Prohibited | Available |  Util% |
 +-----------------------------+------+-------+------------+-----------+--------+
-| Bonded IOB                  |  310 |     0 |          0 |       106 | 292.45 |
+| Bonded IOB                  |  316 |     0 |          0 |       106 | 298.11 |
 | Bonded IPADs                |    0 |     0 |          0 |        10 |   0.00 |
 | Bonded OPADs                |    0 |     0 |          0 |         4 |   0.00 |
 | PHY_CONTROL                 |    0 |     0 |          0 |         5 |   0.00 |
@@ -154,19 +154,18 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| OBUF     |  308 |                  IO |
+| OBUF     |  314 |                  IO |
 | FDRE     |  227 |        Flop & Latch |
-| LUT3     |  108 |                 LUT |
+| LUT3     |  109 |                 LUT |
 | LUT6     |   78 |                 LUT |
-| LUT2     |   71 |                 LUT |
+| LUT2     |   76 |                 LUT |
 | LUT5     |   34 |                 LUT |
 | CARRY4   |   20 |          CarryLogic |
-| LDCE     |    6 |        Flop & Latch |
 | DSP48E1  |    5 |    Block Arithmetic |
 | RAMB36E1 |    4 |        Block Memory |
-| LUT1     |    4 |                 LUT |
-| LUT4     |    3 |                 LUT |
+| LUT1     |    2 |                 LUT |
 | IBUF     |    2 |                  IO |
+| LUT4     |    1 |                 LUT |
 | BUFG     |    1 |               Clock |
 +----------+------+---------------------+
 

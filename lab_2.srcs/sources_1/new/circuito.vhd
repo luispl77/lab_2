@@ -11,7 +11,7 @@ entity circuito is
   port (
     clk, rst    : in  std_logic;
     we, done    : inout std_logic;
-    addr        : inout std_logic_vector(3 downto 0);
+    addr        : inout std_logic_vector(9 downto 0);
     dataOUT     : out std_logic_vector(31 downto 0);
     
     -- internal
@@ -108,7 +108,7 @@ architecture Behavioral of circuito is
   --signal Det_o :  STD_LOGIC_VECTOR(31 downto 0);
   signal addrMSB : std_logic_vector(5 downto 0);
   
-  signal addr_10bits : std_logic_vector (9 downto 0);
+  signal addr4bits : std_logic_vector (3 downto 0);
   signal sel3_concat : std_logic_vector (1 downto 0);
   signal sel5_concat : std_logic_vector (1 downto 0);
   signal sel6_concat : std_logic_vector (1 downto 0);
@@ -120,8 +120,8 @@ begin
   ---------------------------------
   
   addrMSB <= "000000" ;
-  addr_10bits (9 downto 4) <= addrMSB;
-  addr_10bits (3 downto 0) <= addr;
+  addr (9 downto 4) <= addrMSB;
+  addr (3 downto 0) <= addr4bits;
   
   sel3_concat(1) <= Mux_sel(2);
   sel3_concat(0) <= Mux_sel(3);
@@ -143,7 +143,7 @@ begin
 
     done     =>  done,
     we       =>  we,
-    addr     =>  addr,
+    addr     =>  addr4bits,
 
     -- Control Signals for Datapath
     Mux_sel   =>  Mux_sel,
@@ -197,7 +197,7 @@ begin
   ---------------------------------
   inst_memOUT : memOUT port map(
     clk       => clk,
-    addr      => addr_10bits,
+    addr      => addr,
     we        => we,
     dataIN    => Det_out,
     dataOUT   => dataOUT
@@ -210,7 +210,7 @@ begin
   ---------------------------------
   inst_memIN : memIN port map(
     clk       => clk,
-    addr      => addr_10bits,
+    addr      => addr,
     A         => A,
     B         => B,
     C         => C,

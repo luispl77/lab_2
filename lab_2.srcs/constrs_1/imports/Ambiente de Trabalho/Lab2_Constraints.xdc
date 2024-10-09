@@ -22,7 +22,7 @@ set_property PACKAGE_PIN W5 [get_ports clk]
 set_property PACKAGE_PIN D18 [get_ports rst]
 
 set_property PACKAGE_PIN D17 [get_ports we]
-#set_property PACKAGE_PIN E19 [get_ports done]
+set_property PACKAGE_PIN E19 [get_ports done]
 
 set_property PACKAGE_PIN M1 [get_ports {addr[9]}]
 set_property PACKAGE_PIN N2 [get_ports {addr[8]}]

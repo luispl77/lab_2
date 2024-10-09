@@ -65,9 +65,6 @@ begin
         end if;
     end process;
 
-           
-    addr    <= std_logic_vector(counter);
-
     -- State Logic
     process(next_counter,counter,currstate,reset)
     begin
@@ -81,10 +78,11 @@ begin
                 enables     <= "0000";
                 we          <= '0';
                 done        <= '0';
+                addr        <= std_logic_vector(counter);
 
                 -- When the Reset turns off
                 if reset = '0' then
-                    currstate <= CYCLE1;
+                    next_state <= CYCLE1;
                 else
                     next_state <= S_START;
                 end if;
@@ -96,6 +94,7 @@ begin
                 enables     <= "1101";
                 we          <= '0';
                 done        <= '0';
+                addr        <= std_logic_vector(counter);
                 next_counter <= counter;
 
                 next_state <= CYCLE2;
@@ -108,6 +107,7 @@ begin
                 we          <= '0';
                 done        <= '0';
                 next_counter <= counter;
+                addr    <= std_logic_vector(counter);
 
                 next_state <= CYCLE3;
 
@@ -119,6 +119,7 @@ begin
                 we          <= '0';
                 done        <= '0';
                 next_counter <= counter;
+                addr    <= std_logic_vector(counter);
 
                 next_state <= CYCLE4;
 
@@ -130,6 +131,7 @@ begin
                 we          <= '0';
                 done        <= '0';
                 next_counter <= counter;
+                addr    <= std_logic_vector(counter);
 
                 next_state <= CYCLE5;
 
@@ -145,9 +147,11 @@ begin
                     done        <= '1';
                     next_state <= S_DONE;
                     next_counter <= counter;
+                addr    <= std_logic_vector(counter);
                 else
                     done        <= '0';
                     next_counter <= counter + 1;
+                addr    <= std_logic_vector(counter);
                     next_state <= CYCLE1;
                 end if;
 
@@ -161,6 +165,7 @@ begin
                 counter       <= "0000";
                 done        <= '1';
                 next_counter <= counter;
+                addr    <= std_logic_vector(counter);
 
                 next_state <= S_DONE;
 
@@ -174,6 +179,7 @@ begin
                 counter       <= "0000";
                 done        <= '0';
                 next_counter <= counter;
+                addr    <= std_logic_vector(counter);
 
                 next_state <= S_START;
 
