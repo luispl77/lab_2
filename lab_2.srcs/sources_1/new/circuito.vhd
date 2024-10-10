@@ -52,22 +52,25 @@ architecture Behavioral of circuito is
         counter_out  : out signed (3 downto 0);
 
         -- Control Signals for Datapath
-        Mux_sel   : out std_logic_vector(8 downto 0);
+        --Mux_sel   : out std_logic_vector(8 downto 0);
         ALU_sel   : out std_logic;
-        enables   : out std_logic_vector(3 downto 0)
+       -- enables   : out std_logic_vector(3 downto 0);
+        sel1, sel2, sel4 : out STD_LOGIC;
+        sel3, sel5, sel6 : out STD_LOGIC_VECTOR(1 downto 0);
+        en1, en2, en3, en4 : out std_logic
     );
   end component;
 
   component datapath
-    Port (
+    port (
         clk       : in  STD_LOGIC;
         reset     : in  STD_LOGIC;
 
         -- Control Signals
-        ALU_sel   : inout  STD_LOGIC;
-        sel1, sel2, sel4 : inout STD_LOGIC;
-        sel3, sel5, sel6 : inout STD_LOGIC_VECTOR(1 downto 0);
-        en1, en2, en3, en4 : inout std_logic;
+        ALU_sel   : in  STD_LOGIC;
+        sel1, sel2, sel4 : in STD_LOGIC;
+        sel3, sel5, sel6 : in STD_LOGIC_VECTOR(1 downto 0);
+        en1, en2, en3, en4 : in std_logic;
         
         -- Input Memory Data Buses
         A_in      : in  std_logic_vector(15 downto 0);
@@ -119,9 +122,6 @@ architecture Behavioral of circuito is
   signal addrMSB : std_logic_vector(5 downto 0);
   
   signal addr4bits : std_logic_vector (3 downto 0);
-  signal sel3_concat : std_logic_vector (1 downto 0);
-  signal sel5_concat : std_logic_vector (1 downto 0);
-  signal sel6_concat : std_logic_vector (1 downto 0);
 
 begin
     
@@ -132,29 +132,6 @@ begin
     addrMSB <= "000000" ;
     addr (9 downto 4) <= addrMSB;
     addr (3 downto 0) <= addr4bits;
-  
-    sel3_concat(1) <= Mux_sel(2);
-    sel3_concat(0) <= Mux_sel(3);
-  
-    sel5_concat(1) <= Mux_sel(5);
-    sel5_concat(0) <= Mux_sel(6);
-  
-    sel6_concat(1) <= Mux_sel(7);
-    sel6_concat(0) <= Mux_sel(8);
-  
-  
-    sel1      <= Mux_sel(0);
-    sel2      <= Mux_sel(1);
-    sel3      <= sel3_concat;
-    sel4      <= Mux_sel(4);
-    sel5      <= sel5_concat;
-    sel6      <= sel6_concat;
-    en1       <= enables(0);
-    en2       <= enables(1);
-    en3       <= enables(2);
-    en4       <= enables(3);
-  
-  
 
   ---------------------------------
   -- Control Assign
@@ -170,9 +147,19 @@ begin
     counter_out => counter,
 
     -- Control Signals for Datapath
-    Mux_sel   =>  Mux_sel,
+    --Mux_sel   =>  Mux_sel,
     ALU_sel   =>  ALU_sel,
-    enables   =>  enables
+    --enables   =>  enables
+    sel1      => sel1,
+    sel2      => sel2,
+    sel3      => sel3,
+    sel4      => sel4,
+    sel5      => sel5,
+    sel6      => sel6,
+    en1       => en1,
+    en2       => en2,
+    en3       => en3,
+    en4       => en4
 
     );
     
@@ -186,16 +173,17 @@ begin
 
     -- Control
     ALU_sel  => ALU_sel,
-    sel1      => Mux_sel(0),
-    sel2      => Mux_sel(1),
-    sel3      => sel3_concat,
-    sel4      => Mux_sel(4),
-    sel5      => sel5_concat,
-    sel6      => sel6_concat,
-    en1       => enables(0),
-    en2       => enables(1),
-    en3       => enables(2),
-    en4       => enables(3),
+    sel1      => sel1,
+    sel2      => sel2,
+    sel3      => sel3,
+    sel4      => sel4,
+    sel5      => sel5,
+    sel6      => sel6,
+    en1       => en1,
+    en2       => en2,
+    en3       => en3,
+    en4       => en4,
+    
     
     -- Input Memory Data Buses
     A_in      => A,

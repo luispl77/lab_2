@@ -8,12 +8,12 @@
   **** SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
   **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
   **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-  **** Start of session at: Thu Oct 10 21:44:49 2024
+  **** Start of session at: Thu Oct 10 22:02:33 2024
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 
 source circuito.tcl -notrace
-create_project: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 514.578 ; gain = 196.770
+create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 515.098 ; gain = 201.848
 Command: read_checkpoint -auto_incremental -incremental C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/utils_1/imports/synth_1/circuito.dcp
 INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/utils_1/imports/synth_1/circuito.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
@@ -27,19 +27,19 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 27776
+INFO: [Synth 8-7075] Helper process launched with PID 28040
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1368.312 ; gain = 447.973
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1367.359 ; gain = 447.094
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'circuito' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/circuito.vhd:43]
-INFO: [Synth 8-3491] module 'control' declared at 'C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/control.vhd:27' bound to instance 'inst_control' of component 'control' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/circuito.vhd:162]
-INFO: [Synth 8-638] synthesizing module 'control' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/control.vhd:44]
-INFO: [Synth 8-226] default block is never used [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/control.vhd:93]
-INFO: [Synth 8-256] done synthesizing module 'control' (0#1) [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/control.vhd:44]
-INFO: [Synth 8-3491] module 'datapath' declared at 'C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:26' bound to instance 'inst_datapath' of component 'datapath' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/circuito.vhd:183]
+INFO: [Synth 8-3491] module 'control' declared at 'C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/control.vhd:27' bound to instance 'inst_control' of component 'control' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/circuito.vhd:139]
+INFO: [Synth 8-638] synthesizing module 'control' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/control.vhd:47]
+INFO: [Synth 8-226] default block is never used [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/control.vhd:107]
+INFO: [Synth 8-256] done synthesizing module 'control' (0#1) [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/control.vhd:47]
+INFO: [Synth 8-3491] module 'datapath' declared at 'C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:26' bound to instance 'inst_datapath' of component 'datapath' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/circuito.vhd:170]
 INFO: [Synth 8-638] synthesizing module 'datapath' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:56]
 INFO: [Synth 8-256] done synthesizing module 'datapath' (0#1) [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:56]
-INFO: [Synth 8-3491] module 'memOUT' declared at 'C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/memOUT.vhd:14' bound to instance 'inst_memOUT' of component 'MemOUT' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/circuito.vhd:231]
+INFO: [Synth 8-3491] module 'memOUT' declared at 'C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/memOUT.vhd:14' bound to instance 'inst_memOUT' of component 'MemOUT' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/circuito.vhd:219]
 INFO: [Synth 8-638] synthesizing module 'memOUT' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/memOUT.vhd:25]
 	Parameter BRAM_SIZE bound to: 36Kb - type: string 
 	Parameter DEVICE bound to: 7SERIES - type: string 
@@ -359,7 +359,7 @@ INFO: [Synth 8-638] synthesizing module 'unimacro_BRAM_SINGLE_MACRO' [C:/Xilinx/
 INFO: [Synth 8-113] binding component instance 'ram36_bl' to cell 'RAMB36E1' [C:/Xilinx/Vivado/2024.1/data/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhd:2530]
 INFO: [Synth 8-256] done synthesizing module 'unimacro_BRAM_SINGLE_MACRO' (0#1) [C:/Xilinx/Vivado/2024.1/data/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhd:211]
 INFO: [Synth 8-256] done synthesizing module 'memOUT' (0#1) [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/memOUT.vhd:25]
-INFO: [Synth 8-3491] module 'MemIN' declared at 'C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/memIN/memIN1new.vhd:19' bound to instance 'inst_memIN' of component 'MemIN' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/circuito.vhd:244]
+INFO: [Synth 8-3491] module 'MemIN' declared at 'C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/memIN/memIN1new.vhd:19' bound to instance 'inst_memIN' of component 'MemIN' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/circuito.vhd:232]
 INFO: [Synth 8-638] synthesizing module 'MemIN' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/memIN/memIN1new.vhd:28]
 	Parameter BRAM_SIZE bound to: 36Kb - type: string 
 	Parameter DEVICE bound to: 7SERIES - type: string 
@@ -1329,36 +1329,36 @@ WARNING: [Synth 8-3917] design circuito has port addr[7] driven by constant 0
 WARNING: [Synth 8-3917] design circuito has port addr[6] driven by constant 0
 WARNING: [Synth 8-3917] design circuito has port addr[5] driven by constant 0
 WARNING: [Synth 8-3917] design circuito has port addr[4] driven by constant 0
+WARNING: [Synth 8-7129] Port Mux_sel[8] in module circuito is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Mux_sel[7] in module circuito is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Mux_sel[6] in module circuito is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Mux_sel[5] in module circuito is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Mux_sel[4] in module circuito is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Mux_sel[3] in module circuito is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Mux_sel[2] in module circuito is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Mux_sel[1] in module circuito is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Mux_sel[0] in module circuito is either unconnected or has no load
+WARNING: [Synth 8-7129] Port enables[3] in module circuito is either unconnected or has no load
+WARNING: [Synth 8-7129] Port enables[2] in module circuito is either unconnected or has no load
+WARNING: [Synth 8-7129] Port enables[1] in module circuito is either unconnected or has no load
+WARNING: [Synth 8-7129] Port enables[0] in module circuito is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1482.551 ; gain = 562.211
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1481.574 ; gain = 561.309
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1482.551 ; gain = 562.211
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1481.574 ; gain = 561.309
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1482.551 ; gain = 562.211
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1481.574 ; gain = 561.309
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 1482.551 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 1481.574 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 WARNING: [Netlist 29-1115] Found multi-term driver net: <const0>.
 WARNING: [Netlist 29-1115] Found multi-term driver net: ALU_sel.
-WARNING: [Netlist 29-1115] Found multi-term driver net: en1.
-WARNING: [Netlist 29-1115] Found multi-term driver net: en2.
-WARNING: [Netlist 29-1115] Found multi-term driver net: en3.
-WARNING: [Netlist 29-1115] Found multi-term driver net: en4.
-WARNING: [Netlist 29-1115] Found multi-term driver net: sel1.
-WARNING: [Netlist 29-1115] Found multi-term driver net: sel2.
-WARNING: [Netlist 29-1115] Found multi-term driver net: sel3[0].
-WARNING: [Netlist 29-1115] Found multi-term driver net: sel3[1].
-WARNING: [Netlist 29-1115] Found multi-term driver net: sel4.
-WARNING: [Netlist 29-1115] Found multi-term driver net: sel5[0].
-WARNING: [Netlist 29-1115] Found multi-term driver net: sel5[1].
-WARNING: [Netlist 29-1115] Found multi-term driver net: sel6[0].
-WARNING: [Netlist 29-1115] Found multi-term driver net: sel6[1].
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -1372,28 +1372,28 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/circuito_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1482.551 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1502.871 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1482.551 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 1502.871 ; gain = 0.000
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1482.551 ; gain = 562.211
+Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1502.871 ; gain = 582.605
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1482.551 ; gain = 562.211
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1502.871 ; gain = 582.605
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1482.551 ; gain = 562.211
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1502.871 ; gain = 582.605
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'currstate_reg' in module 'control'
 ---------------------------------------------------------------------------------------------------
@@ -1410,7 +1410,7 @@ INFO: [Synth 8-802] inferred FSM for state register 'currstate_reg' in module 'c
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'currstate_reg' using encoding 'one-hot' in module 'control'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1482.551 ; gain = 562.211
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1502.871 ; gain = 582.605
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -1426,12 +1426,11 @@ Detailed RTL Component Info :
 +---Muxes : 
 	   4 Input   32 Bit        Muxes := 2     
 	   2 Input   32 Bit        Muxes := 6     
-	   8 Input    9 Bit        Muxes := 1     
 	   8 Input    8 Bit        Muxes := 1     
 	   2 Input    8 Bit        Muxes := 2     
-	   8 Input    4 Bit        Muxes := 1     
+	   8 Input    2 Bit        Muxes := 3     
 	   2 Input    1 Bit        Muxes := 1     
-	   8 Input    1 Bit        Muxes := 1     
+	   8 Input    1 Bit        Muxes := 6     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -1468,9 +1467,22 @@ WARNING: [Synth 8-3917] design circuito has port addr[7] driven by constant 0
 WARNING: [Synth 8-3917] design circuito has port addr[6] driven by constant 0
 WARNING: [Synth 8-3917] design circuito has port addr[5] driven by constant 0
 WARNING: [Synth 8-3917] design circuito has port addr[4] driven by constant 0
+WARNING: [Synth 8-7129] Port Mux_sel[8] in module circuito is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Mux_sel[7] in module circuito is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Mux_sel[6] in module circuito is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Mux_sel[5] in module circuito is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Mux_sel[4] in module circuito is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Mux_sel[3] in module circuito is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Mux_sel[2] in module circuito is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Mux_sel[1] in module circuito is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Mux_sel[0] in module circuito is either unconnected or has no load
+WARNING: [Synth 8-7129] Port enables[3] in module circuito is either unconnected or has no load
+WARNING: [Synth 8-7129] Port enables[2] in module circuito is either unconnected or has no load
+WARNING: [Synth 8-7129] Port enables[1] in module circuito is either unconnected or has no load
+WARNING: [Synth 8-7129] Port enables[0] in module circuito is either unconnected or has no load
 WARNING: [Synth 8-3332] Sequential element (inst_control/FSM_onehot_currstate_reg[0]) is unused and will be removed from module circuito.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1482.551 ; gain = 562.211
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 1502.871 ; gain = 582.605
 ---------------------------------------------------------------------------------
  Sort Area is  inst_datapath/ARG_2 : 0 0 : 2701 4861 : Used 1 time 0
  Sort Area is  inst_datapath/ARG_2 : 0 1 : 2160 4861 : Used 1 time 0
@@ -1500,19 +1512,19 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 1504.539 ; gain = 584.199
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1509.715 ; gain = 589.449
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1544.590 ; gain = 624.250
+Finished Timing Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 1549.270 ; gain = 629.004
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1544.590 ; gain = 624.250
+Finished Technology Mapping : Time (s): cpu = 00:00:32 ; elapsed = 00:00:32 . Memory (MB): peak = 1549.270 ; gain = 629.004
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -1566,37 +1578,37 @@ CRITICAL WARNING: [Synth 8-6030] Inout pin 'Det_out[2]' is read and/or written w
 CRITICAL WARNING: [Synth 8-6030] Inout pin 'Det_out[1]' is read and/or written without using tristate logic. Proper direction of connection may be wrongly inferred. Please use specific direction to avoid any incorrect logic issue [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/circuito.vhd:10]
 CRITICAL WARNING: [Synth 8-6030] Inout pin 'Det_out[0]' is read and/or written without using tristate logic. Proper direction of connection may be wrongly inferred. Please use specific direction to avoid any incorrect logic issue [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/circuito.vhd:10]
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:39 ; elapsed = 00:00:40 . Memory (MB): peak = 1544.590 ; gain = 624.250
+Finished IO Insertion : Time (s): cpu = 00:00:37 ; elapsed = 00:00:37 . Memory (MB): peak = 1549.270 ; gain = 629.004
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:39 ; elapsed = 00:00:40 . Memory (MB): peak = 1544.590 ; gain = 624.250
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:37 ; elapsed = 00:00:37 . Memory (MB): peak = 1549.270 ; gain = 629.004
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:39 ; elapsed = 00:00:40 . Memory (MB): peak = 1544.590 ; gain = 624.250
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 1549.270 ; gain = 629.004
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:39 ; elapsed = 00:00:40 . Memory (MB): peak = 1544.590 ; gain = 624.250
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 1549.270 ; gain = 629.004
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:39 ; elapsed = 00:00:40 . Memory (MB): peak = 1544.590 ; gain = 624.250
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 1549.270 ; gain = 629.004
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:39 ; elapsed = 00:00:40 . Memory (MB): peak = 1544.590 ; gain = 624.250
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 1549.270 ; gain = 629.004
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -1637,31 +1649,31 @@ Report Cell Usage:
 |15    |FDRE     |   266|
 |16    |FDSE     |     1|
 |17    |IBUF     |     2|
-|18    |OBUF     |   619|
+|18    |OBUF     |   606|
 +------+---------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:39 ; elapsed = 00:00:40 . Memory (MB): peak = 1544.590 ; gain = 624.250
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 1549.270 ; gain = 629.004
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 36 critical warnings and 8 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:28 ; elapsed = 00:00:38 . Memory (MB): peak = 1544.590 ; gain = 624.250
-Synthesis Optimization Complete : Time (s): cpu = 00:00:39 ; elapsed = 00:00:40 . Memory (MB): peak = 1544.590 ; gain = 624.250
+Synthesis finished with 0 errors, 36 critical warnings and 21 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:27 ; elapsed = 00:00:36 . Memory (MB): peak = 1549.270 ; gain = 607.707
+Synthesis Optimization Complete : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 1549.270 ; gain = 629.004
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.022 . Memory (MB): peak = 1544.590 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 1549.270 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 29 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1550.543 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1549.270 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete | Checksum: d35a14b8
+Synth Design complete | Checksum: 729fb442
 INFO: [Common 17-83] Releasing license: Synthesis
-57 Infos, 30 Warnings, 37 Critical Warnings and 0 Errors encountered.
+57 Infos, 43 Warnings, 37 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:45 ; elapsed = 00:00:47 . Memory (MB): peak = 1550.543 ; gain = 1031.043
+synth_design: Time (s): cpu = 00:00:42 ; elapsed = 00:00:44 . Memory (MB): peak = 1549.270 ; gain = 1029.711
 INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1550.543 ; gain = 0.000
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1549.270 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.runs/synth_1/circuito.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file circuito_utilization_synth.rpt -pb circuito_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Oct 10 21:45:48 2024...
+INFO: [Common 17-206] Exiting Vivado at Thu Oct 10 22:03:28 2024...

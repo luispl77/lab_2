@@ -24,15 +24,15 @@ use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
 entity datapath is
-    Port (
+    port (
         clk       : in  STD_LOGIC;
         reset     : in  STD_LOGIC;
 
         -- Control Signals
-        ALU_sel   : inout  STD_LOGIC;
-        sel1, sel2, sel4 : inout STD_LOGIC;
-        sel3, sel5, sel6 : inout STD_LOGIC_VECTOR(1 downto 0);
-        en1, en2, en3, en4 : inout std_logic;
+        ALU_sel   : in  STD_LOGIC;
+        sel1, sel2, sel4 : in STD_LOGIC;
+        sel3, sel5, sel6 : in STD_LOGIC_VECTOR(1 downto 0);
+        en1, en2, en3, en4 : in std_logic;
         
         -- Input Memory Data Buses
         A_in      : in  std_logic_vector(15 downto 0);

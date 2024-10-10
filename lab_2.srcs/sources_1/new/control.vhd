@@ -35,9 +35,12 @@ entity control is
         counter_out  : out signed (3 downto 0);
 
         -- Control Signals for Datapath
-        Mux_sel   : out std_logic_vector(8 downto 0);
+        --Mux_sel   : out std_logic_vector(8 downto 0);
         ALU_sel   : out std_logic;
-        enables   : out std_logic_vector(3 downto 0)
+       -- enables   : out std_logic_vector(3 downto 0);
+        sel1, sel2, sel4 : out STD_LOGIC;
+        sel3, sel5, sel6 : out STD_LOGIC_VECTOR(1 downto 0);
+        en1, en2, en3, en4 : out std_logic
     );
 end control;
 
@@ -85,18 +88,41 @@ begin
     
         -- Default assignments to avoid multi-term driving issues
         ALU_sel     <= '0';   -- Default assignment
-        Mux_sel     <= "000000000"; -- Default assignment for Mux_sel
-        enables     <= "0000"; -- Default assignment for enables
+        sel1      <= '0';
+        sel2      <= '0';    
+        sel3      <= "00";
+        sel4      <= '0';
+        sel5      <= "00";
+        sel6      <= "00";
+        en1       <= '0';
+        en2       <= '0';
+        en3       <= '0';
+        en4       <= '0';
+        
+       -- Mux_sel     <= "000000000"; -- Default assignment for Mux_sel
+      --  enables     <= "0000"; -- Default assignment for enables
         we          <= '0';    -- Default assignment for we
         done        <= '0';    -- Default assignment for done
         
         case currstate is
             when S_START =>
 
-                -- Default assignments
-                ALU_sel     <= '0';
-                Mux_sel     <= "000000000";
-                enables     <= "0000";
+                
+                -- Default assignments to avoid multi-term driving issues
+                ALU_sel     <= '0';   -- Default assignment
+                sel1      <= '0';
+                sel2      <= '0';    
+                sel3      <= "00";
+                sel4      <= '0';
+                sel5      <= "00";
+                sel6      <= "00";
+                en1       <= '0';
+                en2       <= '0';
+                en3       <= '0';
+                en4       <= '0';
+                
+               -- Mux_sel     <= "000000000"; -- Default assignment for Mux_sel
+              --  enables     <= "0000"; -- Default assignment for enables
                 we          <= '0';
                 done        <= '0';
 
@@ -110,8 +136,20 @@ begin
             when CYCLE1 =>
 
                 ALU_sel     <= '0';
-                Mux_sel     <= "001000110";
-                enables     <= "1101";
+                sel1      <= '0';
+                sel2      <= '1';    
+                sel3      <= "10";
+                sel4      <= '0';
+                sel5      <= "01";
+                sel6      <= "00";
+                en1       <= '1';
+                en2       <= '0';
+                en3       <= '1';
+                en4       <= '1';
+                
+                --Mux_sel     <= "001000110";
+                --enables     <= "1101";
+                
                 we          <= '0';
                 done        <= '0';
 
@@ -120,8 +158,19 @@ begin
             when CYCLE2 =>
 
                 ALU_sel     <= '0';
-                Mux_sel     <= "011101001";
-                enables     <= "0110";
+                sel1      <= '1';
+                sel2      <= '0';    
+                sel3      <= "01";
+                sel4      <= '0';
+                sel5      <= "11";
+                sel6      <= "10";
+                en1       <= '0';
+                en2       <= '1';
+                en3       <= '1';
+                en4       <= '0';
+                
+                --Mux_sel     <= "011101001";
+                --enables     <= "0110";
                 we          <= '0';
                 done        <= '0';
 
@@ -130,8 +179,19 @@ begin
             when CYCLE3 =>
 
                 ALU_sel     <= '0';
-                Mux_sel     <= "100110000";
-                enables     <= "0011";
+                sel1      <= '0';
+                sel2      <= '0';    
+                sel3      <= "00";
+                sel4      <= '1';
+                sel5      <= "10";
+                sel6      <= "01";
+                en1       <= '1';
+                en2       <= '1';
+                en3       <= '0';
+                en4       <= '0';
+                
+                --Mux_sel     <= "100110000";
+                --enables     <= "0011";
                 we          <= '0';
                 done        <= '0';
 
@@ -140,8 +200,19 @@ begin
             when CYCLE4 =>
 
                 ALU_sel     <= '0';
-                Mux_sel     <= "000011000";
-                enables     <= "1000";
+                sel1      <= '0';
+                sel2      <= '0';    
+                sel3      <= "01";
+                sel4      <= '1';
+                sel5      <= "00";
+                sel6      <= "00";
+                en1       <= '0';
+                en2       <= '0';
+                en3       <= '0';
+                en4       <= '1';
+                
+                --Mux_sel     <= "000011000";
+                --enables     <= "1000";
                 we          <= '0';
                 done        <= '0';
 
@@ -150,8 +221,19 @@ begin
             when CYCLE5 =>
 
                 ALU_sel     <= '1';
-                Mux_sel     <= "100000000";
-                enables     <= "0000";
+                sel1      <= '0';
+                sel2      <= '0';    
+                sel3      <= "00";
+                sel4      <= '0';
+                sel5      <= "00";
+                sel6      <= "01";
+                en1       <= '0';
+                en2       <= '0';
+                en3       <= '0';
+                en4       <= '0';
+                
+                --Mux_sel     <= "100000000";
+                --enables     <= "0000";
                 we          <= '1';
 
                 -- When all iterations are complete
@@ -166,9 +248,20 @@ begin
             when S_DONE=>
             
                 -- Default assignments
-                ALU_sel     <= '0';
-                Mux_sel     <= "000000000";
-                enables     <= "0000";
+                ALU_sel     <= '0';   -- Default assignment
+                sel1      <= '0';
+                sel2      <= '0';    
+                sel3      <= "00";
+                sel4      <= '0';
+                sel5      <= "00";
+                sel6      <= "00";
+                en1       <= '0';
+                en2       <= '0';
+                en3       <= '0';
+                en4       <= '0';
+                
+               -- Mux_sel     <= "000000000"; -- Default assignment for Mux_sel
+              --  enables     <= "0000"; -- Default assignment for enables
                 we          <= '0';
                 done        <= '1';
 
@@ -177,9 +270,20 @@ begin
             when S_IDLE=>
             
                 -- Default assignments
-                ALU_sel     <= '0';
-                Mux_sel     <= "000000000";
-                enables     <= "0000";
+                ALU_sel     <= '0';   -- Default assignment
+                sel1      <= '0';
+                sel2      <= '0';    
+                sel3      <= "00";
+                sel4      <= '0';
+                sel5      <= "00";
+                sel6      <= "00";
+                en1       <= '0';
+                en2       <= '0';
+                en3       <= '0';
+                en4       <= '0';
+                
+               -- Mux_sel     <= "000000000"; -- Default assignment for Mux_sel
+              --  enables     <= "0000"; -- Default assignment for enables
                 we          <= '0';
                 done        <= '0';
 
@@ -188,9 +292,20 @@ begin
             when others =>
 
                 -- Default assignments
-                ALU_sel     <= '0';
-                Mux_sel     <= "000000000";
-                enables     <= "0000";
+                ALU_sel     <= '0';   -- Default assignment
+                sel1      <= '0';
+                sel2      <= '0';    
+                sel3      <= "00";
+                sel4      <= '0';
+                sel5      <= "00";
+                sel6      <= "00";
+                en1       <= '0';
+                en2       <= '0';
+                en3       <= '0';
+                en4       <= '0';
+                
+               -- Mux_sel     <= "000000000"; -- Default assignment for Mux_sel
+              --  enables     <= "0000"; -- Default assignment for enables
                 we          <= '0';
                 done        <= '0';
 
