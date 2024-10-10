@@ -133,6 +133,11 @@ begin
 
     ------------ Output
     Det_out <=  mux1;
+    Reg1 <= R1;
+    Reg2 <= R2;
+    Reg3 <= R3;
+    Reg4 <= R4;
+    
 
 
 
@@ -153,22 +158,22 @@ begin
             else
                 if en1 = '1' then
                     R1 <= std_logic_vector(mult1_res);
-                    Reg1 <= R1;
+                    --Reg1 <= R1;
                 end if;
                 
                 if en2 = '1' then
                     R2 <= std_logic_vector(alu_res);
-                    Reg2 <= R2;
+                    --Reg2 <= R2;
                 end if;
                 
                 if en3 = '1' then
                     R3 <= mux1;
-                    Reg3 <= R3;
+                    --Reg3 <= R3;
                 end if;
                 
                 if en4 = '1' then
                     R4 <= mux2;
-                    Reg4 <= R4;
+                    --Reg4 <= R4;
                 end if;
                 
             end if;
