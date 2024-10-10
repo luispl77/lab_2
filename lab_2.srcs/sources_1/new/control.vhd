@@ -31,8 +31,8 @@ entity control is
 
         done     : out std_logic;
         we       : out std_logic;
-        addr     : out std_logic_vector(4 downto 0);
-        counter_out  : out unsigned (4 downto 0);
+        addr     : out std_logic_vector(3 downto 0);
+        counter_out  : out signed (3 downto 0);
 
         -- Control Signals for Datapath
         Mux_sel   : out std_logic_vector(8 downto 0);
@@ -47,7 +47,7 @@ architecture Behavioral of control is
     signal currstate, next_state : state_type;
 
     -- Counter to track iterations (N = 16)
-    signal counter, next_counter     : unsigned (4 downto 0):= (others => '0');
+    signal counter    : signed (3 downto 0):= (others => '0');
 
 begin
 
@@ -59,10 +59,15 @@ begin
             if reset = '1' then
                 currstate <= S_START;
                 counter     <= (others => '0');
-                next_counter     <= (others => '0');
             else
                 currstate <= next_state;
-                counter  <= next_counter;
+                
+                if currstate = CYCLE5 then 
+                    counter <= counter + 1;
+                else 
+                    counter <= counter;
+                end if;
+                
             end if;
             
             
@@ -84,7 +89,6 @@ begin
         enables     <= "0000"; -- Default assignment for enables
         we          <= '0';    -- Default assignment for we
         done        <= '0';    -- Default assignment for done
-        next_counter <= counter;  -- Default counter value
         
         case currstate is
             when S_START =>
@@ -99,12 +103,8 @@ begin
                 -- When the Reset turns off
                 if reset = '0' then
                     next_state <= CYCLE1;
-                    -- Counter
-                    next_counter <= "00000";
                 else
                     next_state <= S_START;
-                    -- Counter
-                    next_counter <= "00000";
                 end if;
 
             when CYCLE1 =>
@@ -116,9 +116,6 @@ begin
                 done        <= '0';
 
                 next_state <= CYCLE2;
-                
-                -- Counter
-                next_counter <= counter;
 
             when CYCLE2 =>
 
@@ -129,9 +126,6 @@ begin
                 done        <= '0';
 
                 next_state <= CYCLE3;
-                
-                -- Counter
-                next_counter <= counter;
 
             when CYCLE3 =>
 
@@ -142,9 +136,6 @@ begin
                 done        <= '0';
 
                 next_state <= CYCLE4;
-                
-                -- Counter
-                next_counter <= counter;
 
             when CYCLE4 =>
 
@@ -155,9 +146,6 @@ begin
                 done        <= '0';
 
                 next_state <= CYCLE5;
-                
-                -- Counter
-                next_counter <= counter;
 
             when CYCLE5 =>
 
@@ -167,14 +155,12 @@ begin
                 we          <= '1';
 
                 -- When all iterations are complete
-                if counter = "10000" then
+                if counter = "1111" then
                     done        <= '1';
                     next_state <= S_DONE;
                 else
                     done        <= '0';
                     next_state <= CYCLE1;
-                
-                    next_counter <= counter + 1; --increment
                 end if;
 
             when S_DONE=>
@@ -187,9 +173,6 @@ begin
                 done        <= '1';
 
                 next_state <= S_DONE;
-                
-                -- Counter
-                next_counter <= counter;
 
             when S_IDLE=>
             
@@ -201,9 +184,6 @@ begin
                 done        <= '0';
 
                 next_state <= S_IDLE;
-                
-                -- Counter
-                next_counter <= "00000";
 
             when others =>
 
@@ -215,9 +195,6 @@ begin
                 done        <= '0';
 
                 next_state <= S_IDLE;
-                
-                -- Counter
-                next_counter <= "00000";
 
         end case;
     end process;

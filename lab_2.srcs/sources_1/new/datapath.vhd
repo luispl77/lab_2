@@ -29,10 +29,10 @@ entity datapath is
         reset     : in  STD_LOGIC;
 
         -- Control Signals
-        ALU_sel   : in  STD_LOGIC;
-        sel1, sel2, sel4 : in STD_LOGIC;
-        sel3, sel5, sel6 : in STD_LOGIC_VECTOR(1 downto 0);
-        en1, en2, en3, en4 : in std_logic;
+        ALU_sel   : inout  STD_LOGIC;
+        sel1, sel2, sel4 : inout STD_LOGIC;
+        sel3, sel5, sel6 : inout STD_LOGIC_VECTOR(1 downto 0);
+        en1, en2, en3, en4 : inout std_logic;
         
         -- Input Memory Data Buses
         A_in      : in  std_logic_vector(15 downto 0);
@@ -44,7 +44,9 @@ entity datapath is
 
         
         -- Debug Output
-        Reg1,Reg2,Reg3,Reg4 : out  std_logic_vector(31 downto 0); 
+        Reg1,Reg2,Reg3,Reg4 : out  std_logic_vector(31 downto 0);
+        Mux1_O,Mux2_O,Mux3_O,Mux4_O,Mux5_O,Mux6_O : out std_logic_vector(31 downto 0); 
+        Mult1_O, Mult2_O, ALU_O  : out signed(31 downto 0);
         
         -- Output Memory Data Bus
         Det_out : out  std_logic_vector(31 downto 0) 
@@ -91,7 +93,7 @@ begin
             std_logic_vector(resize(signed(A_in),32)) when sel5 = "10" else
             R3;
     
-    -- multiplexer 4
+    -- multiplexer 6
     mux6 <= std_logic_vector(resize(signed(D_in),32)) when sel6 = "00" else
             R4                                        when sel6 = "01" else 
             ("00" & R4(31 downto 2));
@@ -144,6 +146,10 @@ begin
                 R2 <= X"00000000";
                 R3 <= X"00000000";
                 R4 <= X"00000000";
+                Reg1 <= X"00000000";
+                Reg2 <= X"00000000";
+                Reg3 <= X"00000000";
+                Reg4 <= X"00000000";
             else
                 if en1 = '1' then
                     R1 <= std_logic_vector(mult1_res);
@@ -168,6 +174,20 @@ begin
             end if;
         end if;
     end process;
+    
+    
+    --Debug Signals
+    Mux1_O <= mux1;
+    Mux2_O <= mux2;
+    Mux3_O <= mux3;
+    Mux4_O <= mux4;
+    Mux5_O <= mux5;
+    Mux6_O <= mux6;
+    
+    Mult1_O <= mult1_res;
+    Mult2_O <= mult1_res;
+    
+    ALU_O <= alu_res;
 
 
     

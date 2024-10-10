@@ -5,37 +5,4 @@ Running: C:/Xilinx/Vivado/2024.1/bin/unwrapped/win64.o/xelab.exe --incr --debug 
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.numeric_std
-Compiling package unisim.vcomponents
-Compiling package unimacro.vcomponents
-Compiling package ieee.std_logic_arith
-Compiling package ieee.std_logic_signed
-Compiling package ieee.std_logic_textio
-Compiling package ieee.vital_timing
-Compiling package ieee.vital_primitives
-Compiling package unisim.vpkg
-Compiling architecture behavioral of entity xil_defaultlib.control [control_default]
-Compiling architecture behavioral of entity xil_defaultlib.datapath [datapath_default]
-Compiling architecture rb36_internal_vhdl_v of entity unisim.RB36_INTERNAL_VHDL [\RB36_INTERNAL_VHDL(init_a="0000...]
-Compiling architecture ramb36e1_v of entity unisim.RAMB36E1 [\RAMB36E1(rdaddr_collision_hwcon...]
-Compiling architecture bram_v of entity unimacro.BRAM_SINGLE_MACRO [\BRAM_SINGLE_MACRO(bram_size="36...]
-Compiling architecture gen of entity xil_defaultlib.memOUT [memout_default]
-Compiling architecture rb36_internal_vhdl_v of entity unisim.RB36_INTERNAL_VHDL [\RB36_INTERNAL_VHDL(init_00="111...]
-Compiling architecture ramb36e1_v of entity unisim.RAMB36E1 [\RAMB36E1(init_00="1110010110100...]
-Compiling architecture bram_v of entity unimacro.BRAM_SINGLE_MACRO [\BRAM_SINGLE_MACRO(bram_size="36...]
-Compiling architecture rb36_internal_vhdl_v of entity unisim.RB36_INTERNAL_VHDL [\RB36_INTERNAL_VHDL(init_00="010...]
-Compiling architecture ramb36e1_v of entity unisim.RAMB36E1 [\RAMB36E1(init_00="0100101010011...]
-Compiling architecture bram_v of entity unimacro.BRAM_SINGLE_MACRO [\BRAM_SINGLE_MACRO(bram_size="36...]
-Compiling architecture rb36_internal_vhdl_v of entity unisim.RB36_INTERNAL_VHDL [\RB36_INTERNAL_VHDL(init_00="101...]
-Compiling architecture ramb36e1_v of entity unisim.RAMB36E1 [\RAMB36E1(init_00="1010000111001...]
-Compiling architecture bram_v of entity unimacro.BRAM_SINGLE_MACRO [\BRAM_SINGLE_MACRO(bram_size="36...]
-Compiling architecture gen1727261061 of entity xil_defaultlib.MemIN [memin_default]
-Compiling architecture behavioral of entity xil_defaultlib.circuito [circuito_default]
-Compiling architecture behavior of entity xil_defaultlib.circuito_tb
-Built simulation snapshot circuito_tb_behav
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel

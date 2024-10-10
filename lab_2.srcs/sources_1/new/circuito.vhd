@@ -22,7 +22,13 @@ entity circuito is
         
     -- Debug Output
     Reg1,Reg2,Reg3,Reg4 : inout  std_logic_vector(31 downto 0); 
-    counter  : out unsigned (4 downto 0);
+    counter  : out signed (3 downto 0);
+    sel1, sel2, sel4 : inout STD_LOGIC;
+    sel3, sel5, sel6 : inout STD_LOGIC_VECTOR(1 downto 0);
+    en1, en2, en3, en4 : inout std_logic;
+    Mux1_O,Mux2_O,Mux3_O,Mux4_O,Mux5_O,Mux6_O : out std_logic_vector(31 downto 0); 
+    Mult1_O, Mult2_O, ALU_O  : out signed(31 downto 0);
+        
         
         
     -- Output Memory Data Bus
@@ -42,8 +48,8 @@ architecture Behavioral of circuito is
 
         done     : out std_logic;
         we       : out std_logic;
-        addr     : out std_logic_vector(4 downto 0);
-        counter_out  : out unsigned (4 downto 0);
+        addr     : out std_logic_vector(3 downto 0);
+        counter_out  : out signed (3 downto 0);
 
         -- Control Signals for Datapath
         Mux_sel   : out std_logic_vector(8 downto 0);
@@ -58,10 +64,10 @@ architecture Behavioral of circuito is
         reset     : in  STD_LOGIC;
 
         -- Control Signals
-        ALU_sel   : in  STD_LOGIC;
-        sel1, sel2, sel4 : in STD_LOGIC;
-        sel3, sel5, sel6 : in STD_LOGIC_VECTOR(1 downto 0);
-        en1, en2, en3, en4 : in std_logic;
+        ALU_sel   : inout  STD_LOGIC;
+        sel1, sel2, sel4 : inout STD_LOGIC;
+        sel3, sel5, sel6 : inout STD_LOGIC_VECTOR(1 downto 0);
+        en1, en2, en3, en4 : inout std_logic;
         
         -- Input Memory Data Buses
         A_in      : in  std_logic_vector(15 downto 0);
@@ -73,7 +79,9 @@ architecture Behavioral of circuito is
 
         
         -- Debug Output
-        Reg1,Reg2,Reg3,Reg4 : out  std_logic_vector(31 downto 0); 
+        Reg1,Reg2,Reg3,Reg4 : out  std_logic_vector(31 downto 0);
+        Mux1_O,Mux2_O,Mux3_O,Mux4_O,Mux5_O,Mux6_O : out std_logic_vector(31 downto 0); 
+        Mult1_O, Mult2_O, ALU_O  : out signed(31 downto 0);
         
         -- Output Memory Data Bus
         Det_out : out  std_logic_vector(31 downto 0) 
@@ -108,9 +116,9 @@ architecture Behavioral of circuito is
   -- Connect Wires (MEMORY - DATAPATH)
   --signal A_i,B_i,C_i,D_i,E_i,F_i :  STD_LOGIC_VECTOR(15 downto 0);
   --signal Det_o :  STD_LOGIC_VECTOR(31 downto 0);
-  signal addrMSB : std_logic_vector(4 downto 0);
+  signal addrMSB : std_logic_vector(5 downto 0);
   
-  signal addr5bits : std_logic_vector (4 downto 0);
+  signal addr4bits : std_logic_vector (3 downto 0);
   signal sel3_concat : std_logic_vector (1 downto 0);
   signal sel5_concat : std_logic_vector (1 downto 0);
   signal sel6_concat : std_logic_vector (1 downto 0);
@@ -121,18 +129,30 @@ begin
   -- Circuito Logic
   ---------------------------------
   
-  addrMSB <= "00000" ;
-  addr (9 downto 5) <= addrMSB;
-  addr (4 downto 0) <= addr5bits;
+    addrMSB <= "000000" ;
+    addr (9 downto 4) <= addrMSB;
+    addr (3 downto 0) <= addr4bits;
   
-  sel3_concat(1) <= Mux_sel(2);
-  sel3_concat(0) <= Mux_sel(3);
+    sel3_concat(1) <= Mux_sel(2);
+    sel3_concat(0) <= Mux_sel(3);
   
-  sel5_concat(1) <= Mux_sel(5);
-  sel5_concat(0) <= Mux_sel(6);
+    sel5_concat(1) <= Mux_sel(5);
+    sel5_concat(0) <= Mux_sel(6);
   
-  sel6_concat(1) <= Mux_sel(7);
-  sel6_concat(0) <= Mux_sel(8);
+    sel6_concat(1) <= Mux_sel(7);
+    sel6_concat(0) <= Mux_sel(8);
+  
+  
+    sel1      <= Mux_sel(0);
+    sel2      <= Mux_sel(1);
+    sel3      <= sel3_concat;
+    sel4      <= Mux_sel(4);
+    sel5      <= sel5_concat;
+    sel6      <= sel6_concat;
+    en1       <= enables(0);
+    en2       <= enables(1);
+    en3       <= enables(2);
+    en4       <= enables(3);
   
   
 
@@ -145,7 +165,7 @@ begin
 
     done     =>  done,
     we       =>  we,
-    addr     =>  addr5bits,
+    addr     =>  addr4bits,
     
     counter_out => counter,
 
@@ -189,6 +209,15 @@ begin
     Reg2 => Reg2,
     Reg3 => Reg3,
     Reg4 => Reg4,
+    Mux1_O => Mux1_O,
+    Mux2_O => Mux2_O,
+    Mux3_O => Mux3_O,
+    Mux4_O => Mux4_O,
+    Mux5_O => Mux5_O,
+    Mux6_O => Mux6_O,
+    ALU_O => ALU_O,
+    Mult1_O => Mult1_O,
+    Mult2_O => Mult2_O,
 
     -- Output Memory Data Bus
     Det_out   => Det_out

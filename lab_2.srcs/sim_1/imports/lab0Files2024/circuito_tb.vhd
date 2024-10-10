@@ -54,8 +54,14 @@ architecture behavior of circuito_tb is
 
         
     -- Debug Output
-    Reg1,Reg2,Reg3,Reg4 : inout  std_logic_vector(31 downto 0);  
-    counter  : out unsigned (4 downto 0);
+    Reg1,Reg2,Reg3,Reg4 : inout  std_logic_vector(31 downto 0); 
+    counter  : out signed (3 downto 0);
+    sel1, sel2, sel4 : inout STD_LOGIC;
+    sel3, sel5, sel6 : inout STD_LOGIC_VECTOR(1 downto 0);
+    en1, en2, en3, en4 : inout std_logic;
+    Mux1_O,Mux2_O,Mux3_O,Mux4_O,Mux5_O,Mux6_O : out std_logic_vector(31 downto 0); 
+    Mult1_O, Mult2_O, ALU_O  : out signed(31 downto 0);
+        
         
         
     -- Output Memory Data Bus
@@ -73,7 +79,7 @@ architecture behavior of circuito_tb is
 
   --Outputs
   signal addr  : std_logic_vector(9 downto 0); 
-  signal  counter  : unsigned (4 downto 0);
+  signal  counter  : signed (3 downto 0);
   signal dataOUT : std_logic_vector(31 downto 0);
   signal Det_out : std_logic_vector(31 downto 0);
   signal  we,done   :  std_logic;
@@ -81,7 +87,12 @@ architecture behavior of circuito_tb is
   signal  ALU_sel   :  std_logic;
   signal  enables   :  std_logic_vector(3 downto 0);
   signal A, B, C, D, E, F : std_logic_vector(15 downto 0);
-  signal  Reg1,Reg2,Reg3,Reg4 :   std_logic_vector(31 downto 0);  
+  signal  Reg1,Reg2,Reg3,Reg4 :   std_logic_vector(31 downto 0);
+  signal  sel1, sel2, sel4 :  STD_LOGIC;
+  signal  sel3, sel5, sel6 :  STD_LOGIC_VECTOR(1 downto 0);
+  signal  en1, en2, en3, en4 :  std_logic;
+  signal  Mux1_O,Mux2_O,Mux3_O,Mux4_O,Mux5_O,Mux6_O :  std_logic_vector(31 downto 0); 
+  signal  Mult1_O, Mult2_O, ALU_O  : signed(31 downto 0);  
 
   -- Clock period definitions
   constant clk_period : time := 10 ns;
@@ -104,6 +115,25 @@ begin
     Reg2        => Reg2,
     Reg3        => Reg3,
     Reg4        => Reg4,
+    Mux1_O => Mux1_O,
+    Mux2_O => Mux2_O,
+    Mux3_O => Mux3_O,
+    Mux4_O => Mux4_O,
+    Mux5_O => Mux5_O,
+    Mux6_O => Mux6_O,
+    ALU_O => ALU_O,
+    Mult1_O => Mult1_O,
+    Mult2_O => Mult2_O,
+    sel1 => sel1,
+    sel2 => sel2,
+    sel3 => sel3,
+    sel4 => sel4,
+    sel5 => sel5,
+    sel6 => sel6,
+    en1 => en1,
+    en2 => en2,
+    en3 => en3,
+    en4 => en4,
     A           => A,
     B           => B,
     C           => C,

@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-| Date         : Thu Oct 10 18:41:58 2024
+| Date         : Thu Oct 10 21:45:48 2024
 | Host         : DESKTOP-1H6PMI8 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file circuito_utilization_synth.rpt -pb circuito_utilization_synth.pb
 | Design       : circuito
@@ -31,11 +31,11 @@ Table of Contents
 +-------------------------+------+-------+------------+-----------+-------+
 |        Site Type        | Used | Fixed | Prohibited | Available | Util% |
 +-------------------------+------+-------+------------+-----------+-------+
-| Slice LUTs*             |  300 |     0 |          0 |     20800 |  1.44 |
-|   LUT as Logic          |  300 |     0 |          0 |     20800 |  1.44 |
+| Slice LUTs*             |  270 |     0 |          0 |     20800 |  1.30 |
+|   LUT as Logic          |  270 |     0 |          0 |     20800 |  1.30 |
 |   LUT as Memory         |    0 |     0 |          0 |      9600 |  0.00 |
-| Slice Registers         |  227 |     0 |          0 |     41600 |  0.55 |
-|   Register as Flip Flop |  227 |     0 |          0 |     41600 |  0.55 |
+| Slice Registers         |  267 |     0 |          0 |     41600 |  0.64 |
+|   Register as Flip Flop |  267 |     0 |          0 |     41600 |  0.64 |
 |   Register as Latch     |    0 |     0 |          0 |     41600 |  0.00 |
 | F7 Muxes                |    0 |     0 |          0 |     16300 |  0.00 |
 | F8 Muxes                |    0 |     0 |          0 |      8150 |  0.00 |
@@ -60,7 +60,7 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
 | 1     |          Yes |         Set |            - |
-| 226   |          Yes |       Reset |            - |
+| 266   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -95,7 +95,7 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +-----------------------------+------+-------+------------+-----------+--------+
 |          Site Type          | Used | Fixed | Prohibited | Available |  Util% |
 +-----------------------------+------+-------+------------+-----------+--------+
-| Bonded IOB                  |  321 |     0 |          0 |       106 | 302.83 |
+| Bonded IOB                  |  621 |     0 |          0 |       106 | 585.85 |
 | Bonded IPADs                |    0 |     0 |          0 |        10 |   0.00 |
 | Bonded OPADs                |    0 |     0 |          0 |         4 |   0.00 |
 | PHY_CONTROL                 |    0 |     0 |          0 |         5 |   0.00 |
@@ -154,17 +154,17 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| OBUF     |  319 |                  IO |
-| FDRE     |  226 |        Flop & Latch |
-| LUT3     |  128 |                 LUT |
-| LUT6     |   95 |                 LUT |
-| LUT2     |   64 |                 LUT |
-| LUT5     |   33 |                 LUT |
+| OBUF     |  619 |                  IO |
+| FDRE     |  266 |        Flop & Latch |
+| LUT3     |  127 |                 LUT |
+| LUT5     |   62 |                 LUT |
+| LUT2     |   59 |                 LUT |
+| LUT6     |   37 |                 LUT |
 | CARRY4   |   20 |          CarryLogic |
 | DSP48E1  |    5 |    Block Arithmetic |
 | RAMB36E1 |    4 |        Block Memory |
-| LUT1     |    4 |                 LUT |
-| LUT4     |    2 |                 LUT |
+| LUT4     |    3 |                 LUT |
+| LUT1     |    2 |                 LUT |
 | IBUF     |    2 |                  IO |
 | FDSE     |    1 |        Flop & Latch |
 | BUFG     |    1 |               Clock |
