@@ -32,6 +32,7 @@ entity control is
         done     : out std_logic;
         we       : out std_logic;
         addr     : out std_logic_vector(4 downto 0);
+        counter_out  : out unsigned (4 downto 0);
 
         -- Control Signals for Datapath
         Mux_sel   : out std_logic_vector(8 downto 0);
@@ -46,7 +47,7 @@ architecture Behavioral of control is
     signal currstate, next_state : state_type;
 
     -- Counter to track iterations (N = 16)
-    signal counter, next_counter     : signed (4 downto 0):= (others => '0');
+    signal counter, next_counter     : unsigned (4 downto 0):= (others => '0');
 
 begin
 
@@ -58,19 +59,32 @@ begin
             if reset = '1' then
                 currstate <= S_START;
                 counter     <= (others => '0');
+                next_counter     <= (others => '0');
             else
                 currstate <= next_state;
                 counter  <= next_counter;
             end if;
             
-            addr        <= std_logic_vector(counter); 
             
         end if;
     end process;
+    
+    
+    addr        <= std_logic_vector(counter);
+    counter_out <= counter; 
 
     -- State Logic
     process(counter,currstate,reset)
     begin
+    
+    
+        -- Default assignments to avoid multi-term driving issues
+        ALU_sel     <= '0';   -- Default assignment
+        Mux_sel     <= "000000000"; -- Default assignment for Mux_sel
+        enables     <= "0000"; -- Default assignment for enables
+        we          <= '0';    -- Default assignment for we
+        done        <= '0';    -- Default assignment for done
+        next_counter <= counter;  -- Default counter value
         
         case currstate is
             when S_START =>
@@ -86,11 +100,11 @@ begin
                 if reset = '0' then
                     next_state <= CYCLE1;
                     -- Counter
-                    next_counter <= "0000";
+                    next_counter <= "00000";
                 else
                     next_state <= S_START;
                     -- Counter
-                    next_counter <= "0000";
+                    next_counter <= "00000";
                 end if;
 
             when CYCLE1 =>
@@ -189,7 +203,7 @@ begin
                 next_state <= S_IDLE;
                 
                 -- Counter
-                next_counter <= "0000";
+                next_counter <= "00000";
 
             when others =>
 
@@ -203,7 +217,7 @@ begin
                 next_state <= S_IDLE;
                 
                 -- Counter
-                next_counter <= "0000";
+                next_counter <= "00000";
 
         end case;
     end process;

@@ -1,2 +1,6 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/minde/Ambiente de Trabalho/Proj SD/LAB/2/lab_2/lab_2.srcs/sources_1/new/control.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/circuito.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'circuito'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/control.vhd" into library xil_defaultlib
 INFO: [VRFC 10-3107] analyzing entity 'control'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sim_1/imports/lab0Files2024/circuito_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'circuito_tb'

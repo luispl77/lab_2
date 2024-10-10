@@ -22,6 +22,7 @@ entity circuito is
         
     -- Debug Output
     Reg1,Reg2,Reg3,Reg4 : inout  std_logic_vector(31 downto 0); 
+    counter  : out unsigned (4 downto 0);
         
         
     -- Output Memory Data Bus
@@ -36,17 +37,18 @@ end circuito;
 architecture Behavioral of circuito is
   component control
     port(
-        clk      : in  STD_LOGIC;
-        reset    : in  STD_LOGIC;
+        clk      : in  std_logic;
+        reset    : in  std_logic;
 
-        done     : out STD_LOGIC;
-        we       : out STD_LOGIC;
-        addr     : out STD_LOGIC_VECTOR(4 downto 0);
+        done     : out std_logic;
+        we       : out std_logic;
+        addr     : out std_logic_vector(4 downto 0);
+        counter_out  : out unsigned (4 downto 0);
 
         -- Control Signals for Datapath
-        Mux_sel   : out STD_LOGIC_VECTOR(8 downto 0);
-        ALU_sel   : out STD_LOGIC;
-        enables   : out STD_LOGIC_VECTOR(3 downto 0)
+        Mux_sel   : out std_logic_vector(8 downto 0);
+        ALU_sel   : out std_logic;
+        enables   : out std_logic_vector(3 downto 0)
     );
   end component;
 
@@ -106,7 +108,7 @@ architecture Behavioral of circuito is
   -- Connect Wires (MEMORY - DATAPATH)
   --signal A_i,B_i,C_i,D_i,E_i,F_i :  STD_LOGIC_VECTOR(15 downto 0);
   --signal Det_o :  STD_LOGIC_VECTOR(31 downto 0);
-  signal addrMSB : std_logic_vector(5 downto 0);
+  signal addrMSB : std_logic_vector(4 downto 0);
   
   signal addr5bits : std_logic_vector (4 downto 0);
   signal sel3_concat : std_logic_vector (1 downto 0);
@@ -144,6 +146,8 @@ begin
     done     =>  done,
     we       =>  we,
     addr     =>  addr5bits,
+    
+    counter_out => counter,
 
     -- Control Signals for Datapath
     Mux_sel   =>  Mux_sel,

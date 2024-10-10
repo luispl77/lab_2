@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/Users/minde/Ambiente de Trabalho/Proj SD/LAB/2/lab_2/lab_2.runs/synth_1/circuito.tcl"
+  variable script "C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.runs/synth_1/circuito.tcl"
   variable category "vivado_synth"
 }
 
@@ -62,20 +62,20 @@ create_project -in_memory -part xc7a35tcpg236-1
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir {C:/Users/minde/Ambiente de Trabalho/Proj SD/LAB/2/lab_2/lab_2.cache/wt} [current_project]
-set_property parent.project_path {C:/Users/minde/Ambiente de Trabalho/Proj SD/LAB/2/lab_2/lab_2.xpr} [current_project]
+set_property webtalk.parent_dir C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.cache/wt [current_project]
+set_property parent.project_path C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
-set_property ip_output_repo {c:/Users/minde/Ambiente de Trabalho/Proj SD/LAB/2/lab_2/lab_2.cache/ip} [current_project]
+set_property ip_output_repo c:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_vhdl -library xil_defaultlib {
-  {C:/Users/minde/Ambiente de Trabalho/Proj SD/LAB/2/lab_2/lab_2.srcs/sources_1/new/control.vhd}
-  {C:/Users/minde/Ambiente de Trabalho/Proj SD/LAB/2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd}
-  {C:/Users/minde/Ambiente de Trabalho/Proj SD/LAB/2/lab_2/lab_2.srcs/sources_1/new/memIN/memIN1new.vhd}
-  {C:/Users/minde/Ambiente de Trabalho/Proj SD/LAB/2/lab_2/lab_2.srcs/sources_1/new/memOUT.vhd}
-  {C:/Users/minde/Ambiente de Trabalho/Proj SD/LAB/2/lab_2/lab_2.srcs/sources_1/new/circuito.vhd}
+  C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/control.vhd
+  C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd
+  C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/memIN/memIN1new.vhd
+  C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/memOUT.vhd
+  C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/circuito.vhd
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -86,12 +86,12 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc {{C:/Users/minde/Ambiente de Trabalho/Proj SD/LAB/2/lab_2/lab_2.srcs/constrs_1/imports/Ambiente de Trabalho/Lab2_Constraints.xdc}}
-set_property used_in_implementation false [get_files {{C:/Users/minde/Ambiente de Trabalho/Proj SD/LAB/2/lab_2/lab_2.srcs/constrs_1/imports/Ambiente de Trabalho/Lab2_Constraints.xdc}}]
+read_xdc {{C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/constrs_1/imports/Ambiente de Trabalho/Lab2_Constraints.xdc}}
+set_property used_in_implementation false [get_files {{C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/constrs_1/imports/Ambiente de Trabalho/Lab2_Constraints.xdc}}]
 
 set_param ips.enableIPCacheLiteLoad 1
 
-read_checkpoint -auto_incremental -incremental {C:/Users/minde/Ambiente de Trabalho/Proj SD/LAB/2/lab_2/lab_2.srcs/utils_1/imports/synth_1/circuito.dcp}
+read_checkpoint -auto_incremental -incremental C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/utils_1/imports/synth_1/circuito.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }
