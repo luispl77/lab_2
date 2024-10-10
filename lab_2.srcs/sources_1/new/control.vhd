@@ -65,7 +65,7 @@ begin
             else
                 currstate <= next_state;
                 
-                if currstate = CYCLE5 then 
+                if currstate = CYCLE4 then 
                     counter <= counter + 1;
                 else 
                     counter <= counter;

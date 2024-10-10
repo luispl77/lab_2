@@ -15,9 +15,9 @@ entity circuito is
     dataOUT     : out std_logic_vector(31 downto 0);
     
     -- internal
-    Mux_sel   : inout std_logic_vector(8 downto 0);
+    --Mux_sel   : inout std_logic_vector(8 downto 0);
     ALU_sel   : inout std_logic;
-    enables   : inout std_logic_vector(3 downto 0);
+    --enables   : inout std_logic_vector(3 downto 0);
 
         
     -- Debug Output

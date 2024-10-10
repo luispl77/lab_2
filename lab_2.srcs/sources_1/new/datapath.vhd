@@ -60,6 +60,8 @@ architecture Behavioral of datapath is
     
     -- Signed signals for intermediate calculations
     signal mux3_sg, mux4_sg, mux5_sg, mux6_sg, mult1_res, mult2_res, alu_res: signed(31 downto 0);
+    signal alu_res_33: signed(32 downto 0);
+    signal mult1_res_64, mult2_res_64: signed(63 downto 0);
     signal E_sg, F_sg   : signed(15 downto 0);
     
     -- Multiplexers
@@ -107,7 +109,8 @@ begin
     mux3_sg <= signed(mux3);
     mux4_sg <= signed(mux4);
 
-    mult1_res <= resize((mux3_sg * mux4_sg),32);
+    mult1_res_64 <= mux3_sg * mux4_sg;
+    mult1_res <= mult1_res_64 (31 downto 0);
 
     
     -- multiplier 1
@@ -115,6 +118,7 @@ begin
     F_sg <= signed(F_in);
 
     mult2_res <= E_sg * F_sg; -- already has 32 bits
+    --mult2_res <= mult2_res_64 (31 downto 0);
 
 
 
@@ -126,6 +130,7 @@ begin
 
     alu_res <= mux5_sg + mux6_sg when ALU_sel = '0'
                 else mux5_sg - mux6_sg;
+    --alu_res <= alu_res_33 (31 downto 0);
 
 
 
@@ -190,7 +195,7 @@ begin
     Mux6_O <= mux6;
     
     Mult1_O <= mult1_res;
-    Mult2_O <= mult1_res;
+    Mult2_O <= mult2_res;
     
     ALU_O <= alu_res;
 

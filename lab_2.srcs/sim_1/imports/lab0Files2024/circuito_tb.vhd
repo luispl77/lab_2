@@ -48,9 +48,9 @@ architecture behavior of circuito_tb is
     dataOUT     : out std_logic_vector(31 downto 0);
     
     -- internal
-    Mux_sel   : inout std_logic_vector(8 downto 0);
+    --Mux_sel   : inout std_logic_vector(8 downto 0);
     ALU_sel   : inout std_logic;
-    enables   : inout std_logic_vector(3 downto 0);
+   --enables   : inout std_logic_vector(3 downto 0);
 
         
     -- Debug Output
@@ -83,9 +83,9 @@ architecture behavior of circuito_tb is
   signal dataOUT : std_logic_vector(31 downto 0);
   signal Det_out : std_logic_vector(31 downto 0);
   signal  we,done   :  std_logic;
-  signal Mux_sel   :  std_logic_vector(8 downto 0);
+  --signal Mux_sel   :  std_logic_vector(8 downto 0);
   signal  ALU_sel   :  std_logic;
-  signal  enables   :  std_logic_vector(3 downto 0);
+  --signal  enables   :  std_logic_vector(3 downto 0);
   signal A, B, C, D, E, F : std_logic_vector(15 downto 0);
   signal  Reg1,Reg2,Reg3,Reg4 :   std_logic_vector(31 downto 0);
   signal  sel1, sel2, sel4 :  STD_LOGIC;
@@ -106,9 +106,9 @@ begin
     we          => we,
     done        => done,
     addr        => addr,
-    Mux_sel     => Mux_sel,
+   -- Mux_sel     => Mux_sel,
     ALU_sel     => ALU_sel,
-    enables     => enables,
+   -- enables     => enables,
     counter     => counter,
     Det_out     => Det_out,
     Reg1        => Reg1,

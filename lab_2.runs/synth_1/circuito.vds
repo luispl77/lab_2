@@ -3,8 +3,8 @@
 # SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
 # IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
 # SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Thu Oct 10 22:10:03 2024
-# Process ID: 25080
+# Start of session at: Thu Oct 10 23:38:13 2024
+# Process ID: 17636
 # Current directory: C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.runs/synth_1
 # Command line: vivado.exe -log circuito.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source circuito.tcl
 # Log file: C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.runs/synth_1/circuito.vds
@@ -17,12 +17,12 @@
 # CPU Physical cores:8
 # CPU Logical cores :8
 # Host memory       :17040 MB
-# Swap memory       :4479 MB
-# Total Virtual     :21519 MB
-# Available Virtual :4201 MB
+# Swap memory       :7788 MB
+# Total Virtual     :24829 MB
+# Available Virtual :4362 MB
 #-----------------------------------------------------------
 source circuito.tcl -notrace
-create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 514.012 ; gain = 199.230
+create_project: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 513.168 ; gain = 197.805
 Command: read_checkpoint -auto_incremental -incremental C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/utils_1/imports/synth_1/circuito.dcp
 INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/utils_1/imports/synth_1/circuito.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
@@ -36,9 +36,9 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 22284
+INFO: [Synth 8-7075] Helper process launched with PID 20660
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1368.172 ; gain = 449.301
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1368.270 ; gain = 450.426
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'circuito' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/circuito.vhd:43]
 INFO: [Synth 8-3491] module 'control' declared at 'C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/control.vhd:27' bound to instance 'inst_control' of component 'control' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/circuito.vhd:139]
@@ -1338,32 +1338,19 @@ WARNING: [Synth 8-3917] design circuito has port addr[7] driven by constant 0
 WARNING: [Synth 8-3917] design circuito has port addr[6] driven by constant 0
 WARNING: [Synth 8-3917] design circuito has port addr[5] driven by constant 0
 WARNING: [Synth 8-3917] design circuito has port addr[4] driven by constant 0
-WARNING: [Synth 8-7129] Port Mux_sel[8] in module circuito is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Mux_sel[7] in module circuito is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Mux_sel[6] in module circuito is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Mux_sel[5] in module circuito is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Mux_sel[4] in module circuito is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Mux_sel[3] in module circuito is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Mux_sel[2] in module circuito is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Mux_sel[1] in module circuito is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Mux_sel[0] in module circuito is either unconnected or has no load
-WARNING: [Synth 8-7129] Port enables[3] in module circuito is either unconnected or has no load
-WARNING: [Synth 8-7129] Port enables[2] in module circuito is either unconnected or has no load
-WARNING: [Synth 8-7129] Port enables[1] in module circuito is either unconnected or has no load
-WARNING: [Synth 8-7129] Port enables[0] in module circuito is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1481.625 ; gain = 562.754
+Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1482.066 ; gain = 564.223
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1481.625 ; gain = 562.754
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1482.066 ; gain = 564.223
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1481.625 ; gain = 562.754
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1482.066 ; gain = 564.223
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 1481.625 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 1482.066 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 WARNING: [Netlist 29-1115] Found multi-term driver net: <const0>.
@@ -1381,28 +1368,28 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/circuito_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1534.461 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1533.836 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1534.461 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 1533.836 ; gain = 0.000
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1534.461 ; gain = 615.590
+Finished Constraint Validation : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1533.836 ; gain = 615.992
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1534.461 ; gain = 615.590
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1533.836 ; gain = 615.992
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1534.461 ; gain = 615.590
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1533.836 ; gain = 615.992
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'currstate_reg' in module 'control'
 ---------------------------------------------------------------------------------------------------
@@ -1419,14 +1406,14 @@ INFO: [Synth 8-802] inferred FSM for state register 'currstate_reg' in module 'c
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'currstate_reg' using encoding 'one-hot' in module 'control'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1534.461 ; gain = 615.590
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1533.836 ; gain = 615.992
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input   64 Bit       Adders := 1     
+	   2 Input   32 Bit       Adders := 1     
 	   3 Input   32 Bit       Adders := 1     
 	   2 Input    4 Bit       Adders := 1     
 +---Registers : 
@@ -1455,19 +1442,16 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
-DSP Report: Generating DSP inst_datapath/ARG, operation Mode is: A*B.
-DSP Report: operator inst_datapath/ARG is absorbed into DSP inst_datapath/ARG.
-DSP Report: operator inst_datapath/ARG is absorbed into DSP inst_datapath/ARG.
-DSP Report: Generating DSP inst_datapath/ARG, operation Mode is: (PCIN>>17)+A*B.
-DSP Report: operator inst_datapath/ARG is absorbed into DSP inst_datapath/ARG.
-DSP Report: operator inst_datapath/ARG is absorbed into DSP inst_datapath/ARG.
-DSP Report: Generating DSP inst_datapath/ARG, operation Mode is: A*B.
-DSP Report: operator inst_datapath/ARG is absorbed into DSP inst_datapath/ARG.
-DSP Report: operator inst_datapath/ARG is absorbed into DSP inst_datapath/ARG.
-DSP Report: Generating DSP inst_datapath/ARG, operation Mode is: (PCIN>>17)+A*B.
-DSP Report: operator inst_datapath/ARG is absorbed into DSP inst_datapath/ARG.
-DSP Report: operator inst_datapath/ARG is absorbed into DSP inst_datapath/ARG.
-DSP Report: Generating DSP inst_datapath/mult2_res, operation Mode is: (0 or C)+(A*B or 0).
+DSP Report: Generating DSP inst_datapath/mult1_res_64, operation Mode is: A*B.
+DSP Report: operator inst_datapath/mult1_res_64 is absorbed into DSP inst_datapath/mult1_res_64.
+DSP Report: operator inst_datapath/mult1_res_64 is absorbed into DSP inst_datapath/mult1_res_64.
+DSP Report: Generating DSP inst_datapath/mult1_res_64, operation Mode is: A*B.
+DSP Report: operator inst_datapath/mult1_res_64 is absorbed into DSP inst_datapath/mult1_res_64.
+DSP Report: operator inst_datapath/mult1_res_64 is absorbed into DSP inst_datapath/mult1_res_64.
+DSP Report: Generating DSP inst_datapath/mult1_res_64, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator inst_datapath/mult1_res_64 is absorbed into DSP inst_datapath/mult1_res_64.
+DSP Report: operator inst_datapath/mult1_res_64 is absorbed into DSP inst_datapath/mult1_res_64.
+DSP Report: Generating DSP inst_datapath/mult2_res, operation Mode is: A*B.
 DSP Report: operator inst_datapath/mult2_res is absorbed into DSP inst_datapath/mult2_res.
 WARNING: [Synth 8-3917] design circuito has port addr[9] driven by constant 0
 WARNING: [Synth 8-3917] design circuito has port addr[8] driven by constant 0
@@ -1475,244 +1459,229 @@ WARNING: [Synth 8-3917] design circuito has port addr[7] driven by constant 0
 WARNING: [Synth 8-3917] design circuito has port addr[6] driven by constant 0
 WARNING: [Synth 8-3917] design circuito has port addr[5] driven by constant 0
 WARNING: [Synth 8-3917] design circuito has port addr[4] driven by constant 0
-WARNING: [Synth 8-7129] Port Mux_sel[8] in module circuito is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Mux_sel[7] in module circuito is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Mux_sel[6] in module circuito is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Mux_sel[5] in module circuito is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Mux_sel[4] in module circuito is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Mux_sel[3] in module circuito is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Mux_sel[2] in module circuito is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Mux_sel[1] in module circuito is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Mux_sel[0] in module circuito is either unconnected or has no load
-WARNING: [Synth 8-7129] Port enables[3] in module circuito is either unconnected or has no load
-WARNING: [Synth 8-7129] Port enables[2] in module circuito is either unconnected or has no load
-WARNING: [Synth 8-7129] Port enables[1] in module circuito is either unconnected or has no load
-WARNING: [Synth 8-7129] Port enables[0] in module circuito is either unconnected or has no load
 WARNING: [Synth 8-3332] Sequential element (inst_control/FSM_onehot_currstate_reg[0]) is unused and will be removed from module circuito.
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst_datapath/Reg1_reg[31]/Q' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:136]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:136]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:136]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst_datapath/Reg1_reg[30]/Q' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:136]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:136]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:136]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst_datapath/Reg1_reg[29]/Q' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:136]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:136]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:136]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst_datapath/Reg1_reg[28]/Q' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:136]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:136]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:136]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst_datapath/Reg1_reg[27]/Q' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:136]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:136]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:136]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst_datapath/Reg1_reg[26]/Q' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:136]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:136]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:136]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst_datapath/Reg1_reg[25]/Q' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:136]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:136]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:136]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst_datapath/Reg1_reg[24]/Q' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:136]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:136]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:136]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst_datapath/Reg1_reg[23]/Q' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:136]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:136]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:136]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst_datapath/Reg1_reg[22]/Q' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:136]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:136]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:136]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst_datapath/Reg1_reg[21]/Q' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:136]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:136]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:136]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst_datapath/Reg1_reg[20]/Q' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:136]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:136]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:136]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst_datapath/Reg1_reg[19]/Q' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:136]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:136]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:136]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst_datapath/Reg1_reg[18]/Q' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:136]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:136]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:136]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst_datapath/Reg1_reg[17]/Q' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:136]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:136]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:136]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst_datapath/Reg1_reg[16]/Q' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:136]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:136]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:136]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst_datapath/Reg1_reg[15]/Q' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:136]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:136]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:136]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst_datapath/Reg1_reg[14]/Q' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:136]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:136]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:136]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst_datapath/Reg1_reg[13]/Q' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:136]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:136]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:136]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst_datapath/Reg1_reg[12]/Q' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:136]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:136]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:136]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst_datapath/Reg1_reg[11]/Q' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:136]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:136]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:136]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst_datapath/Reg1_reg[10]/Q' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:136]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:136]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:136]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst_datapath/Reg1_reg[9]/Q' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:136]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:136]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:136]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst_datapath/Reg1_reg[8]/Q' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:136]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:136]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:136]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst_datapath/Reg1_reg[7]/Q' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:136]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:136]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:136]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst_datapath/Reg1_reg[6]/Q' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:136]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:136]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:136]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst_datapath/Reg1_reg[5]/Q' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:136]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:136]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:136]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst_datapath/Reg1_reg[4]/Q' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:136]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:136]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:136]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst_datapath/Reg1_reg[3]/Q' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:136]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:136]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:136]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst_datapath/Reg1_reg[2]/Q' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:136]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:136]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:136]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst_datapath/Reg1_reg[1]/Q' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:136]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:136]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:136]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst_datapath/Reg1_reg[0]/Q' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:136]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:136]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:136]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst_datapath/Reg2_reg[31]/Q' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:137]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:137]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:137]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst_datapath/Reg2_reg[30]/Q' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:137]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:137]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:137]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst_datapath/Reg2_reg[29]/Q' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:137]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:137]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:137]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst_datapath/Reg2_reg[28]/Q' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:137]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:137]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:137]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst_datapath/Reg2_reg[27]/Q' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:137]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:137]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:137]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst_datapath/Reg2_reg[26]/Q' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:137]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:137]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:137]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst_datapath/Reg2_reg[25]/Q' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:137]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:137]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:137]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst_datapath/Reg2_reg[24]/Q' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:137]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:137]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:137]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst_datapath/Reg2_reg[23]/Q' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:137]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:137]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:137]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst_datapath/Reg2_reg[22]/Q' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:137]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:137]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:137]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst_datapath/Reg2_reg[21]/Q' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:137]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:137]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:137]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst_datapath/Reg2_reg[20]/Q' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:137]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:137]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:137]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst_datapath/Reg2_reg[19]/Q' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:137]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:137]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:137]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst_datapath/Reg2_reg[18]/Q' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:137]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:137]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:137]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst_datapath/Reg2_reg[17]/Q' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:137]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:137]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:137]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst_datapath/Reg2_reg[16]/Q' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:137]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:137]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:137]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst_datapath/Reg2_reg[15]/Q' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:137]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:137]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:137]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst_datapath/Reg2_reg[14]/Q' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:137]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:137]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst_datapath/Reg1_reg[31]/Q' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:141]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:141]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:141]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst_datapath/Reg1_reg[30]/Q' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:141]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:141]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:141]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst_datapath/Reg1_reg[29]/Q' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:141]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:141]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:141]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst_datapath/Reg1_reg[28]/Q' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:141]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:141]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:141]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst_datapath/Reg1_reg[27]/Q' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:141]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:141]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:141]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst_datapath/Reg1_reg[26]/Q' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:141]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:141]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:141]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst_datapath/Reg1_reg[25]/Q' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:141]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:141]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:141]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst_datapath/Reg1_reg[24]/Q' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:141]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:141]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:141]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst_datapath/Reg1_reg[23]/Q' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:141]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:141]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:141]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst_datapath/Reg1_reg[22]/Q' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:141]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:141]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:141]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst_datapath/Reg1_reg[21]/Q' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:141]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:141]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:141]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst_datapath/Reg1_reg[20]/Q' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:141]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:141]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:141]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst_datapath/Reg1_reg[19]/Q' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:141]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:141]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:141]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst_datapath/Reg1_reg[18]/Q' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:141]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:141]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:141]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst_datapath/Reg1_reg[17]/Q' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:141]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:141]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:141]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst_datapath/Reg1_reg[16]/Q' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:141]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:141]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:141]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst_datapath/Reg1_reg[15]/Q' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:141]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:141]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:141]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst_datapath/Reg1_reg[14]/Q' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:141]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:141]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:141]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst_datapath/Reg1_reg[13]/Q' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:141]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:141]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:141]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst_datapath/Reg1_reg[12]/Q' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:141]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:141]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:141]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst_datapath/Reg1_reg[11]/Q' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:141]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:141]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:141]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst_datapath/Reg1_reg[10]/Q' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:141]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:141]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:141]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst_datapath/Reg1_reg[9]/Q' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:141]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:141]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:141]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst_datapath/Reg1_reg[8]/Q' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:141]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:141]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:141]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst_datapath/Reg1_reg[7]/Q' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:141]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:141]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:141]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst_datapath/Reg1_reg[6]/Q' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:141]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:141]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:141]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst_datapath/Reg1_reg[5]/Q' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:141]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:141]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:141]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst_datapath/Reg1_reg[4]/Q' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:141]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:141]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:141]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst_datapath/Reg1_reg[3]/Q' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:141]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:141]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:141]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst_datapath/Reg1_reg[2]/Q' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:141]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:141]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:141]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst_datapath/Reg1_reg[1]/Q' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:141]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:141]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:141]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst_datapath/Reg1_reg[0]/Q' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:141]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:141]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:141]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst_datapath/Reg2_reg[31]/Q' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:142]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:142]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:142]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst_datapath/Reg2_reg[30]/Q' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:142]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:142]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:142]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst_datapath/Reg2_reg[29]/Q' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:142]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:142]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:142]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst_datapath/Reg2_reg[28]/Q' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:142]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:142]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:142]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst_datapath/Reg2_reg[27]/Q' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:142]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:142]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:142]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst_datapath/Reg2_reg[26]/Q' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:142]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:142]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:142]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst_datapath/Reg2_reg[25]/Q' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:142]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:142]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:142]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst_datapath/Reg2_reg[24]/Q' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:142]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:142]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:142]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst_datapath/Reg2_reg[23]/Q' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:142]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:142]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:142]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst_datapath/Reg2_reg[22]/Q' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:142]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:142]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:142]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst_datapath/Reg2_reg[21]/Q' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:142]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:142]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:142]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst_datapath/Reg2_reg[20]/Q' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:142]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:142]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:142]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst_datapath/Reg2_reg[19]/Q' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:142]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:142]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:142]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst_datapath/Reg2_reg[18]/Q' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:142]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:142]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:142]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst_datapath/Reg2_reg[17]/Q' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:142]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:142]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:142]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst_datapath/Reg2_reg[16]/Q' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:142]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:142]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:142]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst_datapath/Reg2_reg[15]/Q' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:142]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:142]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:142]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst_datapath/Reg2_reg[14]/Q' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:142]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:142]
 INFO: [Common 17-14] Message 'Synth 8-6859' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:137]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:137]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:137]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:137]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:137]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:137]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:137]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:137]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:137]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:137]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:137]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:137]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:137]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:137]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:137]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:138]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:138]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:138]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:138]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:138]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:138]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:138]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:138]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:138]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:138]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:138]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:138]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:138]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:138]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:138]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:138]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:138]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:138]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:138]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:138]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:138]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:138]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:138]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:138]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:138]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:138]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:138]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:138]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:138]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:138]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:138]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:138]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:139]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:139]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:139]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:139]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:142]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:142]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:142]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:142]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:142]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:142]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:142]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:142]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:142]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:142]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:142]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:142]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:142]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:142]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:142]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:143]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:143]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:143]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:143]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:143]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:143]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:143]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:143]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:143]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:143]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:143]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:143]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:143]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:143]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:143]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:143]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:143]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:143]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:143]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:143]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:143]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:143]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:143]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:143]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:143]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:143]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:143]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:143]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:143]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:143]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:143]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:143]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:144]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:144]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:144]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/datapath.vhd:144]
 INFO: [Common 17-14] Message 'Synth 8-6858' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1534.461 ; gain = 615.590
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1533.836 ; gain = 615.992
 ---------------------------------------------------------------------------------
- Sort Area is  inst_datapath/ARG_0 : 0 0 : 2701 4861 : Used 1 time 0
- Sort Area is  inst_datapath/ARG_0 : 0 1 : 2160 4861 : Used 1 time 0
- Sort Area is  inst_datapath/ARG_3 : 0 0 : 2158 3958 : Used 1 time 0
- Sort Area is  inst_datapath/ARG_3 : 0 1 : 1800 3958 : Used 1 time 0
- Sort Area is  inst_datapath/mult2_res_6 : 0 0 : 1969 1969 : Used 1 time 0
+ Sort Area is  inst_datapath/mult1_res_64_0 : 0 0 : 2701 4456 : Used 1 time 0
+ Sort Area is  inst_datapath/mult1_res_64_0 : 0 1 : 1755 4456 : Used 1 time 0
+ Sort Area is  inst_datapath/mult2_res_5 : 0 0 : 1937 1937 : Used 1 time 0
+ Sort Area is  inst_datapath/mult1_res_64_3 : 0 0 : 1755 1755 : Used 1 time 0
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 
 DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
-+------------+---------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|Module Name | DSP Mapping         | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
-+------------+---------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|datapath    | A*B                 | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|datapath    | (PCIN>>17)+A*B      | 15     | 15     | -      | -      | 30     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|datapath    | A*B                 | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|datapath    | (PCIN>>17)+A*B      | 18     | 15     | -      | -      | 47     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|datapath    | (0 or C)+(A*B or 0) | 16     | 16     | 32     | -      | 32     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-+------------+---------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|datapath    | A*B            | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|datapath    | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|datapath    | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|datapath    | A*B            | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 
 Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
 ---------------------------------------------------------------------------------
@@ -1722,19 +1691,19 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1534.461 ; gain = 615.590
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1533.836 ; gain = 615.992
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1535.391 ; gain = 616.520
+Finished Timing Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 1537.359 ; gain = 619.516
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1535.391 ; gain = 616.520
+Finished Technology Mapping : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 1537.359 ; gain = 619.516
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -1788,37 +1757,37 @@ CRITICAL WARNING: [Synth 8-6030] Inout pin 'Det_out[2]' is read and/or written w
 CRITICAL WARNING: [Synth 8-6030] Inout pin 'Det_out[1]' is read and/or written without using tristate logic. Proper direction of connection may be wrongly inferred. Please use specific direction to avoid any incorrect logic issue [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/circuito.vhd:10]
 CRITICAL WARNING: [Synth 8-6030] Inout pin 'Det_out[0]' is read and/or written without using tristate logic. Proper direction of connection may be wrongly inferred. Please use specific direction to avoid any incorrect logic issue [C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.srcs/sources_1/new/circuito.vhd:10]
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 1535.391 ; gain = 616.520
+Finished IO Insertion : Time (s): cpu = 00:00:39 ; elapsed = 00:00:40 . Memory (MB): peak = 1537.359 ; gain = 619.516
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 1535.391 ; gain = 616.520
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:39 ; elapsed = 00:00:40 . Memory (MB): peak = 1537.359 ; gain = 619.516
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 1535.391 ; gain = 616.520
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:39 ; elapsed = 00:00:40 . Memory (MB): peak = 1537.359 ; gain = 619.516
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 1535.391 ; gain = 616.520
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:39 ; elapsed = 00:00:40 . Memory (MB): peak = 1537.359 ; gain = 619.516
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 1535.391 ; gain = 616.520
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:39 ; elapsed = 00:00:40 . Memory (MB): peak = 1537.359 ; gain = 619.516
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 1535.391 ; gain = 616.520
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:39 ; elapsed = 00:00:40 . Memory (MB): peak = 1537.359 ; gain = 619.516
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -1828,11 +1797,10 @@ DSP Final Report (the ' indicates corresponding REG is set)
 +------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 |Module Name | DSP Mapping  | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
 +------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|datapath    | A*B          | 17     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|datapath    | PCIN>>17+A*B | 30     | 18     | -      | -      | 30     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|datapath    | A*B          | 30     | 18     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
 |datapath    | A*B          | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|datapath    | PCIN>>17+A*B | 17     | 18     | -      | -      | 47     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|datapath    | Dynamic      | -      | -      | -      | -      | 32     | -    | -    | -    | -    | -     | 0    | 0    | 
+|datapath    | PCIN>>17+A*B | 30     | 18     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|datapath    | A*B          | 30     | 18     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
 +------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 
 
@@ -1847,42 +1815,42 @@ Report Cell Usage:
 |      |Cell     |Count |
 +------+---------+------+
 |1     |BUFG     |     1|
-|2     |CARRY4   |    20|
-|3     |DSP48E1  |     5|
-|5     |LUT1     |     2|
-|6     |LUT2     |    73|
-|7     |LUT3     |    66|
-|8     |LUT4     |    48|
-|9     |LUT6     |    35|
-|10    |RAMB36E1 |     4|
-|14    |FDRE     |    10|
-|15    |FDSE     |     1|
-|16    |IBUF     |     2|
-|17    |OBUF     |   606|
+|2     |CARRY4   |    12|
+|3     |DSP48E1  |     4|
+|4     |LUT1     |     1|
+|5     |LUT2     |    41|
+|6     |LUT3     |    97|
+|7     |LUT4     |    48|
+|8     |LUT6     |    35|
+|9     |RAMB36E1 |     4|
+|13    |FDRE     |    10|
+|14    |FDSE     |     1|
+|15    |IBUF     |     2|
+|16    |OBUF     |   606|
 +------+---------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 1535.391 ; gain = 616.520
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:39 ; elapsed = 00:00:40 . Memory (MB): peak = 1537.359 ; gain = 619.516
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 420 critical warnings and 21 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:25 ; elapsed = 00:00:34 . Memory (MB): peak = 1535.391 ; gain = 563.684
-Synthesis Optimization Complete : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 1535.391 ; gain = 616.520
+Synthesis finished with 0 errors, 420 critical warnings and 8 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:27 ; elapsed = 00:00:38 . Memory (MB): peak = 1537.359 ; gain = 567.746
+Synthesis Optimization Complete : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 1537.359 ; gain = 619.516
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 1535.391 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 29 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 1537.359 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 20 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1546.574 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1548.465 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete | Checksum: ac0bf564
+Synth Design complete | Checksum: c5c531d9
 INFO: [Common 17-83] Releasing license: Synthesis
-59 Infos, 43 Warnings, 237 Critical Warnings and 0 Errors encountered.
+59 Infos, 17 Warnings, 237 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 1546.574 ; gain = 1028.340
+synth_design: Time (s): cpu = 00:00:45 ; elapsed = 00:00:48 . Memory (MB): peak = 1548.465 ; gain = 1030.531
 INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1546.574 ; gain = 0.000
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1548.465 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/minde/Desktop/SDProj/LAB_24/Lab2/lab_2/lab_2.runs/synth_1/circuito.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file circuito_utilization_synth.rpt -pb circuito_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Oct 10 22:10:56 2024...
+INFO: [Common 17-206] Exiting Vivado at Thu Oct 10 23:39:12 2024...
