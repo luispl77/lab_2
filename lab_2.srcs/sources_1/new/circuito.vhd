@@ -10,32 +10,33 @@ use IEEE.NUMERIC_STD.ALL;
 entity circuito is
   port (
     clk, rst    : in  std_logic;
-    we, done    : inout std_logic;
-    addr        : inout std_logic_vector(9 downto 0);
-    dataOUT     : out std_logic_vector(31 downto 0);
+    we, done    : out std_logic;
+    --addrMEMin     : out std_logic_vector(9 downto 0);
+    addrMEMout     : out std_logic_vector(9 downto 0);
+    dataOUT     : out std_logic_vector(31 downto 0)
     
     -- internal
     --Mux_sel   : inout std_logic_vector(8 downto 0);
-    ALU_sel   : inout std_logic;
+    --ALU_sel   : out std_logic;
     --enables   : inout std_logic_vector(3 downto 0);
 
         
     -- Debug Output
-    Reg1,Reg2,Reg3,Reg4 : inout  std_logic_vector(31 downto 0); 
-    counter  : out signed (3 downto 0);
-    sel1, sel2, sel4 : inout STD_LOGIC;
-    sel3, sel5, sel6 : inout STD_LOGIC_VECTOR(1 downto 0);
-    en1, en2, en3, en4 : inout std_logic;
-    Mux1_O,Mux2_O,Mux3_O,Mux4_O,Mux5_O,Mux6_O : out std_logic_vector(31 downto 0); 
-    Mult1_O, Mult2_O, ALU_O  : out signed(31 downto 0);
+    --Reg1,Reg2,Reg3,Reg4 : out  std_logic_vector(31 downto 0); 
+    ---counter  : out signed (4 downto 0);
+    --sel1, sel2, sel4 : out STD_LOGIC;
+   -- sel3, sel5, sel6 : out STD_LOGIC_VECTOR(1 downto 0);
+    --en1, en2, en3, en4 : out std_logic;
+    --Mux1_O,Mux2_O,Mux3_O,Mux4_O,Mux5_O,Mux6_O : out std_logic_vector(31 downto 0); 
+    --Mult1_O, Mult2_O, ALU_O  : out signed(31 downto 0);
         
         
         
     -- Output Memory Data Bus
-    Det_out : inout  std_logic_vector(31 downto 0);
+    --Det_out : out  std_logic_vector(31 downto 0);
     
     
-    A, B, C, D, E, F : inout std_logic_vector(15 downto 0) 
+    --A, B, C, D, E, F : out std_logic_vector(15 downto 0) 
     
     );
 end circuito;
@@ -48,8 +49,9 @@ architecture Behavioral of circuito is
 
         done     : out std_logic;
         we       : out std_logic;
-        addr     : out std_logic_vector(3 downto 0);
-        counter_out  : out signed (3 downto 0);
+        addrMEMin     : out std_logic_vector(3 downto 0);
+        addrMEMout     : out std_logic_vector(3 downto 0);
+        --counter_out  : out signed (4 downto 0);
 
         -- Control Signals for Datapath
         --Mux_sel   : out std_logic_vector(8 downto 0);
@@ -112,16 +114,22 @@ architecture Behavioral of circuito is
   end component;
 
   -- Connect Wires (CONTROL - DATAPATH)
-  --signal    ALU_sel :  STD_LOGIC;
-  --signal    sel :  STD_LOGIC_VECTOR(7 downto 0);
-  --signal    enables :  STD_LOGIC_VECTOR(3 downto 0);
+  signal    ALU_sel_internal :  STD_LOGIC;
+  signal    we_internal :  STD_LOGIC;
 
   -- Connect Wires (MEMORY - DATAPATH)
-  --signal A_i,B_i,C_i,D_i,E_i,F_i :  STD_LOGIC_VECTOR(15 downto 0);
-  --signal Det_o :  STD_LOGIC_VECTOR(31 downto 0);
+  signal   A_internal,B_internal,C_internal,D_internal,E_internal,F_internal :  STD_LOGIC_VECTOR(15 downto 0);
+  signal   counter_internal  :  signed (4 downto 0);
+  signal   sel1_internal, sel2_internal, sel4_internal : STD_LOGIC;
+  signal   sel3_internal, sel5_internal, sel6_internal : STD_LOGIC_VECTOR(1 downto 0);
+  signal   en1_internal, en2_internal, en3_internal, en4_internal : std_logic;
+  signal   addrMEMin_internal     : std_logic_vector(9 downto 0);
+  signal   addrMEMout_internal      : std_logic_vector(9 downto 0);
+  
+  signal Det_out_internal :  STD_LOGIC_VECTOR(31 downto 0);
   signal addrMSB : std_logic_vector(5 downto 0);
   
-  signal addr4bits : std_logic_vector (3 downto 0);
+  signal addr4bits_IN, addr4bits_OUT : std_logic_vector (3 downto 0);
 
 begin
     
@@ -130,8 +138,44 @@ begin
   ---------------------------------
   
     addrMSB <= "000000" ;
-    addr (9 downto 4) <= addrMSB;
-    addr (3 downto 0) <= addr4bits;
+    
+    addrMEMin_internal (9 downto 4) <= addrMSB;
+    addrMEMin_internal (3 downto 0) <= addr4bits_IN;
+    
+    addrMEMin_internal (3 downto 0) <= addr4bits_IN;
+    
+    addrMEMout_internal (9 downto 4) <= addrMSB;
+    addrMEMout_internal (3 downto 0) <= addr4bits_OUT;
+    
+    
+    
+  ---------------------------------
+  -- Circuito Output Logic
+  ---------------------------------
+  
+    --ALU_sel  <= ALU_sel_internal;
+    we  <= we_internal;
+    --sel1      <= sel1_internal;
+--    sel2      <= sel2_internal;
+  --  sel3      <= sel3_internal;
+    --sel4      <= sel4_internal;
+    --sel5      <= sel5_internal;
+    --sel6      <= sel6_internal;
+    --en1       <= en1_internal;
+    --en2       <= en2_internal;
+    --en3       <= en3_internal;
+    --en4       <= en4_internal;
+    addrMEMout <= addrMEMout_internal;
+    --addrMEMin <= addrMEMin_internal;
+    --Det_out <=  Det_out_internal;
+    --A      <= A_internal;
+    --B      <= B_internal;
+    --C      <= C_internal;
+    --D      <= D_internal;
+    --E      <= E_internal;
+    --F      <= F_internal;
+  
+  
 
   ---------------------------------
   -- Control Assign
@@ -141,25 +185,26 @@ begin
     reset     =>  rst,
 
     done     =>  done,
-    we       =>  we,
-    addr     =>  addr4bits,
+    we       =>  we_internal,
+    addrMEMin => addr4bits_IN,
+    addrMEMout => addr4bits_OUT,
     
-    counter_out => counter,
+    --counter_out => counter,
 
     -- Control Signals for Datapath
     --Mux_sel   =>  Mux_sel,
-    ALU_sel   =>  ALU_sel,
+    ALU_sel   =>  ALU_sel_internal,
     --enables   =>  enables
-    sel1      => sel1,
-    sel2      => sel2,
-    sel3      => sel3,
-    sel4      => sel4,
-    sel5      => sel5,
-    sel6      => sel6,
-    en1       => en1,
-    en2       => en2,
-    en3       => en3,
-    en4       => en4
+    sel1      => sel1_internal,
+    sel2      => sel2_internal,
+    sel3      => sel3_internal,
+    sel4      => sel4_internal,
+    sel5      => sel5_internal,
+    sel6      => sel6_internal,
+    en1       => en1_internal,
+    en2       => en2_internal,
+    en3       => en3_internal,
+    en4       => en4_internal
 
     );
     
@@ -172,43 +217,43 @@ begin
     reset     => rst,
 
     -- Control
-    ALU_sel  => ALU_sel,
-    sel1      => sel1,
-    sel2      => sel2,
-    sel3      => sel3,
-    sel4      => sel4,
-    sel5      => sel5,
-    sel6      => sel6,
-    en1       => en1,
-    en2       => en2,
-    en3       => en3,
-    en4       => en4,
+    ALU_sel  => ALU_sel_internal,
+    sel1      => sel1_internal,
+    sel2      => sel2_internal,
+    sel3      => sel3_internal,
+    sel4      => sel4_internal,
+    sel5      => sel5_internal,
+    sel6      => sel6_internal,
+    en1       => en1_internal,
+    en2       => en2_internal,
+    en3       => en3_internal,
+    en4       => en4_internal,
     
     
     -- Input Memory Data Buses
-    A_in      => A,
-    B_in      => B,
-    C_in      => C,
-    D_in      => D,
-    E_in      => E,
-    F_in      => F,
+    A_in      => A_internal,
+    B_in      => B_internal,
+    C_in      => C_internal,
+    D_in      => D_internal,
+    E_in      => E_internal,
+    F_in      => F_internal,
     
-    Reg1 => Reg1,
-    Reg2 => Reg2,
-    Reg3 => Reg3,
-    Reg4 => Reg4,
-    Mux1_O => Mux1_O,
-    Mux2_O => Mux2_O,
-    Mux3_O => Mux3_O,
-    Mux4_O => Mux4_O,
-    Mux5_O => Mux5_O,
-    Mux6_O => Mux6_O,
-    ALU_O => ALU_O,
-    Mult1_O => Mult1_O,
-    Mult2_O => Mult2_O,
+    --Reg1 => Reg1,
+    --Reg2 => Reg2,
+    --Reg3 => Reg3,
+    --Reg4 => Reg4,
+    --Mux1_O => Mux1_O,
+    --Mux2_O => Mux2_O,
+    --Mux3_O => Mux3_O,
+    --Mux4_O => Mux4_O,
+    --Mux5_O => Mux5_O,
+    --Mux6_O => Mux6_O,
+    --ALU_O => ALU_O,
+    --Mult1_O => Mult1_O,
+    --Mult2_O => Mult2_O,
 
     -- Output Memory Data Bus
-    Det_out   => Det_out
+    Det_out   => Det_out_internal
     );
 
   
@@ -218,9 +263,9 @@ begin
   ---------------------------------
   inst_memOUT : memOUT port map(
     clk       => clk,
-    addr      => addr,
-    we        => we,
-    dataIN    => Det_out,
+    addr      => addrMEMout_internal,
+    we        => we_internal,
+    dataIN    => Det_out_internal,
     dataOUT   => dataOUT
   
   );
@@ -231,13 +276,13 @@ begin
   ---------------------------------
   inst_memIN : memIN port map(
     clk       => clk,
-    addr      => addr,
-    A         => A,
-    B         => B,
-    C         => C,
-    D         => D,
-    E         => E,
-    F         => F
+    addr      => addrMEMin_internal,
+    A         => A_internal,
+    B         => B_internal,
+    C         => C_internal,
+    D         => D_internal,
+    E         => E_internal,
+    F         => F_internal
   
   );
   

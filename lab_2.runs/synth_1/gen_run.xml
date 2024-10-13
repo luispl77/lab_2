@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1728599889" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/circuito.dcp">
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1728659730" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/circuito.dcp">
   <File Type="PA-TCL" Name="circuito.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="circuito_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="circuito_reports.tcl"/>
@@ -58,6 +58,7 @@
       </FileInfo>
     </File>
     <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/imports/Ambiente de Trabalho/Lab2_Constraints.xdc"/>
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>
   </FileSet>

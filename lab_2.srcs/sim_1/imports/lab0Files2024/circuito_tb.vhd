@@ -41,34 +41,35 @@ architecture behavior of circuito_tb is
   -- Component Declaration for the Unit Under Test (UUT)
 
   component circuito
-    port (
+   port (
     clk, rst    : in  std_logic;
-    we, done    : inout std_logic;
-    addr        : inout std_logic_vector(9 downto 0);
-    dataOUT     : out std_logic_vector(31 downto 0);
+    we, done    : out std_logic;
+    --addrMEMin     : out std_logic_vector(9 downto 0);
+    addrMEMout     : out std_logic_vector(9 downto 0);
+    dataOUT     : out std_logic_vector(31 downto 0)
     
     -- internal
     --Mux_sel   : inout std_logic_vector(8 downto 0);
-    ALU_sel   : inout std_logic;
-   --enables   : inout std_logic_vector(3 downto 0);
+    --ALU_sel   : out std_logic;
+    --enables   : inout std_logic_vector(3 downto 0);
 
         
     -- Debug Output
-    Reg1,Reg2,Reg3,Reg4 : inout  std_logic_vector(31 downto 0); 
-    counter  : out signed (3 downto 0);
-    sel1, sel2, sel4 : inout STD_LOGIC;
-    sel3, sel5, sel6 : inout STD_LOGIC_VECTOR(1 downto 0);
-    en1, en2, en3, en4 : inout std_logic;
-    Mux1_O,Mux2_O,Mux3_O,Mux4_O,Mux5_O,Mux6_O : out std_logic_vector(31 downto 0); 
-    Mult1_O, Mult2_O, ALU_O  : out signed(31 downto 0);
+    --Reg1,Reg2,Reg3,Reg4 : out  std_logic_vector(31 downto 0); 
+    ---counter  : out signed (4 downto 0);
+    --sel1, sel2, sel4 : out STD_LOGIC;
+   -- sel3, sel5, sel6 : out STD_LOGIC_VECTOR(1 downto 0);
+    --en1, en2, en3, en4 : out std_logic;
+    --Mux1_O,Mux2_O,Mux3_O,Mux4_O,Mux5_O,Mux6_O : out std_logic_vector(31 downto 0); 
+    --Mult1_O, Mult2_O, ALU_O  : out signed(31 downto 0);
         
         
         
     -- Output Memory Data Bus
-    Det_out : inout  std_logic_vector(31 downto 0);
+    --Det_out : out  std_logic_vector(31 downto 0);
     
     
-    A, B, C, D, E, F : inout std_logic_vector(15 downto 0) 
+    --A, B, C, D, E, F : out std_logic_vector(15 downto 0) 
     
     );
   end component;
@@ -78,8 +79,8 @@ architecture behavior of circuito_tb is
   signal clk,rst            : std_logic    := '0';
 
   --Outputs
-  signal addr  : std_logic_vector(9 downto 0); 
-  signal  counter  : signed (3 downto 0);
+  signal addrMEMin,addrMEMout  : std_logic_vector(9 downto 0); 
+  signal  counter  : signed (4 downto 0);  -- Changed from signed to unsigned and from 3 downto 0 to 4 downto 0
   signal dataOUT : std_logic_vector(31 downto 0);
   signal Det_out : std_logic_vector(31 downto 0);
   signal  we,done   :  std_logic;
@@ -87,7 +88,7 @@ architecture behavior of circuito_tb is
   signal  ALU_sel   :  std_logic;
   --signal  enables   :  std_logic_vector(3 downto 0);
   signal A, B, C, D, E, F : std_logic_vector(15 downto 0);
-  signal  Reg1,Reg2,Reg3,Reg4 :   std_logic_vector(31 downto 0);
+  --signal  Reg1,Reg2,Reg3,Reg4 :   std_logic_vector(31 downto 0);
   signal  sel1, sel2, sel4 :  STD_LOGIC;
   signal  sel3, sel5, sel6 :  STD_LOGIC_VECTOR(1 downto 0);
   signal  en1, en2, en3, en4 :  std_logic;
@@ -95,7 +96,7 @@ architecture behavior of circuito_tb is
   signal  Mult1_O, Mult2_O, ALU_O  : signed(31 downto 0);  
 
   -- Clock period definitions
-  constant clk_period : time := 10 ns;
+  constant clk_period : time := 13.780 ns;
 
 begin
 
@@ -105,41 +106,43 @@ begin
     rst         => rst,
     we          => we,
     done        => done,
-    addr        => addr,
+    --addrMEMin        => addrMEMin,
+    addrMEMout        => addrMEMout,
    -- Mux_sel     => Mux_sel,
-    ALU_sel     => ALU_sel,
+    --ALU_sel     => ALU_sel,
    -- enables     => enables,
-    counter     => counter,
-    Det_out     => Det_out,
-    Reg1        => Reg1,
-    Reg2        => Reg2,
-    Reg3        => Reg3,
-    Reg4        => Reg4,
-    Mux1_O => Mux1_O,
-    Mux2_O => Mux2_O,
-    Mux3_O => Mux3_O,
-    Mux4_O => Mux4_O,
-    Mux5_O => Mux5_O,
-    Mux6_O => Mux6_O,
-    ALU_O => ALU_O,
-    Mult1_O => Mult1_O,
-    Mult2_O => Mult2_O,
-    sel1 => sel1,
-    sel2 => sel2,
-    sel3 => sel3,
-    sel4 => sel4,
-    sel5 => sel5,
-    sel6 => sel6,
-    en1 => en1,
-    en2 => en2,
-    en3 => en3,
-    en4 => en4,
-    A           => A,
-    B           => B,
-    C           => C,
-    D           => D,
-    E           => E,
-    F           => F 
+    --counter     => counter,
+    --Det_out     => Det_out,
+    --Reg1        => Reg1,
+    --Reg2        => Reg2,
+    ---Reg3        => Reg3,
+    --Reg4        => Reg4,
+    --Mux1_O => Mux1_O,
+    --Mux2_O => Mux2_O,
+    --Mux3_O => Mux3_O,
+    --Mux4_O => Mux4_O,
+    --Mux5_O => Mux5_O,
+    --Mux6_O => Mux6_O,
+    --ALU_O => ALU_O,
+    --Mult1_O => Mult1_O,
+    --Mult2_O => Mult2_O,
+    --sel1 => sel1,
+    --sel2 => sel2,
+    --sel3 => sel3,
+    --sel4 => sel4,
+    --sel5 => sel5,
+    --sel6 => sel6,
+    --en1 => en1,
+    --en2 => en2,
+    --en3 => en3,
+    --en4 => en4,
+    dataOUT => dataOUT
+    --A           => A,
+    --B           => B,
+    --C           => C,
+    --D           => D,
+    --E           => E,
+    --F           => F 
     );
 
   -- Clock definition
@@ -158,5 +161,5 @@ begin
                                 
     wait;
   end process;
-
+ 
 end;

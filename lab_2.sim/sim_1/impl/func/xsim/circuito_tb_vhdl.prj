@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"circuito_tb_func_impl.vhd" \
+"../../../../../lab_2.srcs/sim_1/imports/lab0Files2024/circuito_tb.vhd" \
+
+# Do not sort compile order
+nosort

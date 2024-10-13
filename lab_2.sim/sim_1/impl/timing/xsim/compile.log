@@ -1,0 +1,13 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/minde/Ambiente de Trabalho/Proj SD/LAB/2/lab_2/lab_2.sim/sim_1/impl/timing/xsim/circuito_tb_time_impl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MemIN
+INFO: [VRFC 10-311] analyzing module circuito
+INFO: [VRFC 10-311] analyzing module control
+INFO: [VRFC 10-311] analyzing module datapath
+INFO: [VRFC 10-311] analyzing module memOUT
+INFO: [VRFC 10-311] analyzing module unimacro_BRAM_SINGLE_MACRO
+INFO: [VRFC 10-311] analyzing module unimacro_BRAM_SINGLE_MACRO__parameterized0
+INFO: [VRFC 10-311] analyzing module unimacro_BRAM_SINGLE_MACRO__parameterized1
+INFO: [VRFC 10-311] analyzing module unimacro_BRAM_SINGLE_MACRO__parameterized2
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/minde/Ambiente de Trabalho/Proj SD/LAB/2/lab_2/lab_2.srcs/sim_1/imports/lab0Files2024/circuito_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'circuito_tb'

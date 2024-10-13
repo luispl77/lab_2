@@ -1,0 +1,53 @@
+Vivado Simulator v2024.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2024.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 --maxdelay -L xil_defaultlib -L simprims_ver -L secureip --snapshot circuito_tb_time_synth -transport_int_delays -pulse_r 0 -pulse_int_r 0 -pulse_e 0 -pulse_int_e 0 xil_defaultlib.circuito_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+WARNING: [XSIM 43-3918] Unable to determine HDL language type of design hierarchy in SDF. Returning without back annotation.
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package vl.vl_types
+Compiling module xil_defaultlib.glbl
+Compiling module simprims_ver.OBUF
+Compiling module simprims_ver.BUFG
+Compiling module simprims_ver.IBUF
+Compiling module simprims_ver.LUT5
+Compiling module simprims_ver.x_lut3_mux8
+Compiling module simprims_ver.LUT3
+Compiling module simprims_ver.LUT6
+Compiling module simprims_ver.FDSE(INIT=1'b0)
+Compiling module simprims_ver.FDRE_default
+Compiling module simprims_ver.LUT4
+Compiling module simprims_ver.x_lut1_mux2
+Compiling module simprims_ver.LUT1
+Compiling module simprims_ver.x_lut2_mux4
+Compiling module simprims_ver.LUT2
+Compiling module xil_defaultlib.control
+Compiling module simprims_ver.DSP48E1(ACASCREG=0,ALUMODEREG=0,...
+Compiling module simprims_ver.CARRY4
+Compiling module xil_defaultlib.datapath
+Compiling module simprims_ver.RB36_INTERNAL_VLOG(RDADDR_COLLIS...
+Compiling module simprims_ver.RAMB36E1(INIT_00=256'b1110010110...
+Compiling module xil_defaultlib.unimacro_BRAM_SINGLE_MACRO__para...
+Compiling module simprims_ver.RB36_INTERNAL_VLOG(RDADDR_COLLIS...
+Compiling module simprims_ver.RAMB36E1(INIT_00=256'b0100101010...
+Compiling module xil_defaultlib.unimacro_BRAM_SINGLE_MACRO__para...
+Compiling module simprims_ver.RB36_INTERNAL_VLOG(RDADDR_COLLIS...
+Compiling module simprims_ver.RAMB36E1(INIT_00=256'b1010000111...
+Compiling module xil_defaultlib.unimacro_BRAM_SINGLE_MACRO__para...
+Compiling module xil_defaultlib.MemIN
+Compiling module simprims_ver.RB36_INTERNAL_VLOG(RDADDR_COLLIS...
+Compiling module simprims_ver.RAMB36E1(RDADDR_COLLISION_HWCONF...
+Compiling module xil_defaultlib.unimacro_BRAM_SINGLE_MACRO
+Compiling module xil_defaultlib.memOUT
+Compiling module xil_defaultlib.circuito
+Compiling architecture behavior of entity xil_defaultlib.circuito_tb
+Built simulation snapshot circuito_tb_time_synth

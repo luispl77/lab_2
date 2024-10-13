@@ -31,8 +31,9 @@ entity control is
 
         done     : out std_logic;
         we       : out std_logic;
-        addr     : out std_logic_vector(3 downto 0);
-        counter_out  : out signed (3 downto 0);
+        addrMEMin     : out std_logic_vector(3 downto 0);
+        addrMEMout     : out std_logic_vector(3 downto 0);
+        --counter_out  : out signed (4 downto 0);
 
         -- Control Signals for Datapath
         --Mux_sel   : out std_logic_vector(8 downto 0);
@@ -46,11 +47,11 @@ end control;
 
 architecture Behavioral of control is
 
-    type state_type is (S_IDLE,S_START, CYCLE1, CYCLE2, CYCLE3, CYCLE4, CYCLE5, S_DONE);
+    type state_type is (S_IDLE,S_START, CYCLE1, CYCLE2, CYCLE3, CYCLE4, CYCLE5, S_DONE, S_STORE);
     signal currstate, next_state : state_type;
 
     -- Counter to track iterations (N = 16)
-    signal counter    : signed (3 downto 0):= (others => '0');
+    signal counterMEMin,counterMEMout    : signed (4 downto 0):= (others => '0');
 
 begin
 
@@ -61,14 +62,32 @@ begin
         
             if reset = '1' then
                 currstate <= S_START;
-                counter     <= (others => '0');
+                counterMEMin     <= (others => '0');
             else
                 currstate <= next_state;
                 
-                if currstate = CYCLE4 then 
-                    counter <= counter + 1;
+         --       if currstate = CYCLE4 then 
+         --           counterMEMin <= counterMEMin + 1;
+         --       else 
+          --          counterMEMin <= counterMEMin;
+         --       end if;
+                
+                --if currstate = CYCLE5 then 
+                --    counterMEMout <= counterMEMout + 1;
+                --else 
+                --    counterMEMout <= counterMEMout;
+                --end if;
+                
+                if currstate = CYCLE5 then 
+                    counterMEMin <= counterMEMin + 1;
                 else 
-                    counter <= counter;
+                    counterMEMin <= counterMEMin;
+                end if;
+                
+                if currstate = S_STORE then 
+                    counterMEMout <= counterMEMout + 1;
+                else 
+                    counterMEMout <= counterMEMout;
                 end if;
                 
             end if;
@@ -78,11 +97,12 @@ begin
     end process;
     
     
-    addr        <= std_logic_vector(counter);
-    counter_out <= counter; 
+    addrMEMin <= std_logic_vector(counterMEMin(3 downto 0));
+    addrMEMout <= std_logic_vector(counterMEMout(3 downto 0));
+    --counter_out <= counterMEMin; 
 
     -- State Logic
-    process(counter,currstate,reset)
+    process(counterMEMin,currstate,reset)
     begin
     
     
@@ -235,9 +255,41 @@ begin
                 --Mux_sel     <= "100000000";
                 --enables     <= "0000";
                 we          <= '1';
-
+                next_state <= S_STORE;
+                
                 -- When all iterations are complete
-                if counter = "1111" then
+               -- if counterMEMin = "10000" then
+                 --   done        <= '1';
+                 --   next_state <= S_DONE;
+                --else
+                 --   done        <= '0';
+                --    next_state <= CYCLE1;
+                --end if
+
+                
+                
+            when S_STORE =>
+
+                ALU_sel     <= '0';
+                sel1      <= '0';
+                sel2      <= '0';    
+                sel3      <= "00";
+                sel4      <= '0';
+                sel5      <= "00";
+                sel6      <= "00";
+                en1       <= '0';
+                en2       <= '0';
+                en3       <= '0';
+                en4       <= '0';
+                
+                --Mux_sel     <= "001000110";
+                --enables     <= "1101";
+                
+                we          <= '0';
+                done        <= '0';
+                
+                -- When all iterations are complete
+                if counterMEMin = "10000" then
                     done        <= '1';
                     next_state <= S_DONE;
                 else

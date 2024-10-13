@@ -4,12 +4,12 @@
 ## - rename the used ports (in each line, after get_ports) according to the top level signal names in the project
 
 ## Clock signal
-set_property IOSTANDARD LVCMOS33 [get_ports clk]
-create_clock -period 10.000 -name sys_clk_pin -add [get_ports clk]
+create_clock -period 13.780 -name sys_clk_pin -waveform {0.000 0.500} -add [get_ports clk]
 
 ## Constraints on INPUTS and OUTPUTS ports
 set_input_delay -clock [get_clocks *] 0.000 [get_ports * -filter { NAME !~ "clk" && DIRECTION == "IN" }]
-set_output_delay -clock [get_clocks *] 0.000 [get_ports * -filter { NAME =~  "*" && DIRECTION == "OUT" }]
+set _xlnx_shared_i0 [get_ports * -filter { NAME =~  "*" && DIRECTION == "OUT" }]
+set_output_delay -clock [get_clocks *] 0.000 $_xlnx_shared_i0
 
 ##
 set_property CONFIG_VOLTAGE 3.3 [current_design]
@@ -24,16 +24,16 @@ set_property PACKAGE_PIN D18 [get_ports rst]
 set_property PACKAGE_PIN D17 [get_ports we]
 set_property PACKAGE_PIN E19 [get_ports done]
 
-set_property PACKAGE_PIN M1 [get_ports {addr[9]}]
-set_property PACKAGE_PIN N2 [get_ports {addr[8]}]
-set_property PACKAGE_PIN N1 [get_ports {addr[7]}]
-set_property PACKAGE_PIN N3 [get_ports {addr[6]}]
-set_property PACKAGE_PIN P3 [get_ports {addr[5]}]
-set_property PACKAGE_PIN P1 [get_ports {addr[4]}]
-set_property PACKAGE_PIN D19 [get_ports {addr[3]}]
-set_property PACKAGE_PIN G18 [get_ports {addr[2]}]
-set_property PACKAGE_PIN F18 [get_ports {addr[1]}]
-set_property PACKAGE_PIN E18 [get_ports {addr[0]}]
+set_property PACKAGE_PIN M1 [get_ports {addrMEMout[9]}]
+set_property PACKAGE_PIN N2 [get_ports {addrMEMout[8]}]
+set_property PACKAGE_PIN N1 [get_ports {addrMEMout[7]}]
+set_property PACKAGE_PIN N3 [get_ports {addrMEMout[6]}]
+set_property PACKAGE_PIN P3 [get_ports {addrMEMout[5]}]
+set_property PACKAGE_PIN P1 [get_ports {addrMEMout[4]}]
+set_property PACKAGE_PIN D19 [get_ports {addrMEMout[3]}]
+set_property PACKAGE_PIN G18 [get_ports {addrMEMout[2]}]
+set_property PACKAGE_PIN F18 [get_ports {addrMEMout[1]}]
+set_property PACKAGE_PIN E18 [get_ports {addrMEMout[0]}]
 
 set_property PACKAGE_PIN N19 [get_ports {dataOUT[31]}]
 set_property PACKAGE_PIN P19 [get_ports {dataOUT[30]}]
@@ -73,5 +73,7 @@ set_property IOSTANDARD LVCMOS33 [get_ports *]
 
 set_property DRIVE 12 [get_ports * -filter { NAME =~  "addr*" && DIRECTION == "OUT" }]
 set_property DRIVE 12 [get_ports * -filter { NAME =~  "dataOUT*" && DIRECTION == "OUT" }]
+
+
 
 

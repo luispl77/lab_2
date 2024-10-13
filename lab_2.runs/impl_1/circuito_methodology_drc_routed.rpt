@@ -1,0 +1,366 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
+| Date         : Fri Oct 11 16:17:00 2024
+| Host         : Jaime running 64-bit major release  (build 9200)
+| Command      : report_methodology -file circuito_methodology_drc_routed.rpt -pb circuito_methodology_drc_routed.pb -rpx circuito_methodology_drc_routed.rpx
+| Design       : circuito
+| Device       : xc7a35tcpg236-1
+| Speed File   : -1
+| Design State : Fully Routed
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 48
++----------+----------+------------------------------------------+------------+
+| Rule     | Severity | Description                              | Violations |
++----------+----------+------------------------------------------+------------+
+| SYNTH-10 | Warning  | Wide multiplier                          | 3          |
+| XDCH-2   | Warning  | Same min and max delay values on IO port | 45         |
++----------+----------+------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+SYNTH-10#1 Warning
+Wide multiplier  
+Detected multiplier at inst_datapath/mult1_res_64 of size 15x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#2 Warning
+Wide multiplier  
+Detected multiplier at inst_datapath/mult1_res_64__0 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#3 Warning
+Wide multiplier  
+Detected multiplier at inst_datapath/mult1_res_64__1 of size 18x15, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+XDCH-2#1 Warning
+Same min and max delay values on IO port  
+The same input delay of 0.000 ns has been defined on port 'rst' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks *] 0.000 [get_ports * -filter { NAME !~ "clk" && DIRECTION == "IN" }]
+C:/Users/minde/Ambiente de Trabalho/Proj SD/LAB/2/lab_2/lab_2.srcs/constrs_1/imports/Ambiente de Trabalho/Lab2_Constraints.xdc (Line: 10)
+Related violations: <none>
+
+XDCH-2#2 Warning
+Same min and max delay values on IO port  
+The same output delay of 0.000 ns has been defined on port 'addrMEMout[0]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks *] 0.000 [get_ports * -filter { NAME =~  "*" && DIRECTION == "OUT" }]
+C:/Users/minde/Ambiente de Trabalho/Proj SD/LAB/2/lab_2/lab_2.srcs/constrs_1/imports/Ambiente de Trabalho/Lab2_Constraints.xdc (Line: 12)
+Related violations: <none>
+
+XDCH-2#3 Warning
+Same min and max delay values on IO port  
+The same output delay of 0.000 ns has been defined on port 'addrMEMout[1]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks *] 0.000 [get_ports * -filter { NAME =~  "*" && DIRECTION == "OUT" }]
+C:/Users/minde/Ambiente de Trabalho/Proj SD/LAB/2/lab_2/lab_2.srcs/constrs_1/imports/Ambiente de Trabalho/Lab2_Constraints.xdc (Line: 12)
+Related violations: <none>
+
+XDCH-2#4 Warning
+Same min and max delay values on IO port  
+The same output delay of 0.000 ns has been defined on port 'addrMEMout[2]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks *] 0.000 [get_ports * -filter { NAME =~  "*" && DIRECTION == "OUT" }]
+C:/Users/minde/Ambiente de Trabalho/Proj SD/LAB/2/lab_2/lab_2.srcs/constrs_1/imports/Ambiente de Trabalho/Lab2_Constraints.xdc (Line: 12)
+Related violations: <none>
+
+XDCH-2#5 Warning
+Same min and max delay values on IO port  
+The same output delay of 0.000 ns has been defined on port 'addrMEMout[3]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks *] 0.000 [get_ports * -filter { NAME =~  "*" && DIRECTION == "OUT" }]
+C:/Users/minde/Ambiente de Trabalho/Proj SD/LAB/2/lab_2/lab_2.srcs/constrs_1/imports/Ambiente de Trabalho/Lab2_Constraints.xdc (Line: 12)
+Related violations: <none>
+
+XDCH-2#6 Warning
+Same min and max delay values on IO port  
+The same output delay of 0.000 ns has been defined on port 'addrMEMout[4]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks *] 0.000 [get_ports * -filter { NAME =~  "*" && DIRECTION == "OUT" }]
+C:/Users/minde/Ambiente de Trabalho/Proj SD/LAB/2/lab_2/lab_2.srcs/constrs_1/imports/Ambiente de Trabalho/Lab2_Constraints.xdc (Line: 12)
+Related violations: <none>
+
+XDCH-2#7 Warning
+Same min and max delay values on IO port  
+The same output delay of 0.000 ns has been defined on port 'addrMEMout[5]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks *] 0.000 [get_ports * -filter { NAME =~  "*" && DIRECTION == "OUT" }]
+C:/Users/minde/Ambiente de Trabalho/Proj SD/LAB/2/lab_2/lab_2.srcs/constrs_1/imports/Ambiente de Trabalho/Lab2_Constraints.xdc (Line: 12)
+Related violations: <none>
+
+XDCH-2#8 Warning
+Same min and max delay values on IO port  
+The same output delay of 0.000 ns has been defined on port 'addrMEMout[6]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks *] 0.000 [get_ports * -filter { NAME =~  "*" && DIRECTION == "OUT" }]
+C:/Users/minde/Ambiente de Trabalho/Proj SD/LAB/2/lab_2/lab_2.srcs/constrs_1/imports/Ambiente de Trabalho/Lab2_Constraints.xdc (Line: 12)
+Related violations: <none>
+
+XDCH-2#9 Warning
+Same min and max delay values on IO port  
+The same output delay of 0.000 ns has been defined on port 'addrMEMout[7]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks *] 0.000 [get_ports * -filter { NAME =~  "*" && DIRECTION == "OUT" }]
+C:/Users/minde/Ambiente de Trabalho/Proj SD/LAB/2/lab_2/lab_2.srcs/constrs_1/imports/Ambiente de Trabalho/Lab2_Constraints.xdc (Line: 12)
+Related violations: <none>
+
+XDCH-2#10 Warning
+Same min and max delay values on IO port  
+The same output delay of 0.000 ns has been defined on port 'addrMEMout[8]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks *] 0.000 [get_ports * -filter { NAME =~  "*" && DIRECTION == "OUT" }]
+C:/Users/minde/Ambiente de Trabalho/Proj SD/LAB/2/lab_2/lab_2.srcs/constrs_1/imports/Ambiente de Trabalho/Lab2_Constraints.xdc (Line: 12)
+Related violations: <none>
+
+XDCH-2#11 Warning
+Same min and max delay values on IO port  
+The same output delay of 0.000 ns has been defined on port 'addrMEMout[9]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks *] 0.000 [get_ports * -filter { NAME =~  "*" && DIRECTION == "OUT" }]
+C:/Users/minde/Ambiente de Trabalho/Proj SD/LAB/2/lab_2/lab_2.srcs/constrs_1/imports/Ambiente de Trabalho/Lab2_Constraints.xdc (Line: 12)
+Related violations: <none>
+
+XDCH-2#12 Warning
+Same min and max delay values on IO port  
+The same output delay of 0.000 ns has been defined on port 'dataOUT[0]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks *] 0.000 [get_ports * -filter { NAME =~  "*" && DIRECTION == "OUT" }]
+C:/Users/minde/Ambiente de Trabalho/Proj SD/LAB/2/lab_2/lab_2.srcs/constrs_1/imports/Ambiente de Trabalho/Lab2_Constraints.xdc (Line: 12)
+Related violations: <none>
+
+XDCH-2#13 Warning
+Same min and max delay values on IO port  
+The same output delay of 0.000 ns has been defined on port 'dataOUT[10]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks *] 0.000 [get_ports * -filter { NAME =~  "*" && DIRECTION == "OUT" }]
+C:/Users/minde/Ambiente de Trabalho/Proj SD/LAB/2/lab_2/lab_2.srcs/constrs_1/imports/Ambiente de Trabalho/Lab2_Constraints.xdc (Line: 12)
+Related violations: <none>
+
+XDCH-2#14 Warning
+Same min and max delay values on IO port  
+The same output delay of 0.000 ns has been defined on port 'dataOUT[11]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks *] 0.000 [get_ports * -filter { NAME =~  "*" && DIRECTION == "OUT" }]
+C:/Users/minde/Ambiente de Trabalho/Proj SD/LAB/2/lab_2/lab_2.srcs/constrs_1/imports/Ambiente de Trabalho/Lab2_Constraints.xdc (Line: 12)
+Related violations: <none>
+
+XDCH-2#15 Warning
+Same min and max delay values on IO port  
+The same output delay of 0.000 ns has been defined on port 'dataOUT[12]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks *] 0.000 [get_ports * -filter { NAME =~  "*" && DIRECTION == "OUT" }]
+C:/Users/minde/Ambiente de Trabalho/Proj SD/LAB/2/lab_2/lab_2.srcs/constrs_1/imports/Ambiente de Trabalho/Lab2_Constraints.xdc (Line: 12)
+Related violations: <none>
+
+XDCH-2#16 Warning
+Same min and max delay values on IO port  
+The same output delay of 0.000 ns has been defined on port 'dataOUT[13]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks *] 0.000 [get_ports * -filter { NAME =~  "*" && DIRECTION == "OUT" }]
+C:/Users/minde/Ambiente de Trabalho/Proj SD/LAB/2/lab_2/lab_2.srcs/constrs_1/imports/Ambiente de Trabalho/Lab2_Constraints.xdc (Line: 12)
+Related violations: <none>
+
+XDCH-2#17 Warning
+Same min and max delay values on IO port  
+The same output delay of 0.000 ns has been defined on port 'dataOUT[14]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks *] 0.000 [get_ports * -filter { NAME =~  "*" && DIRECTION == "OUT" }]
+C:/Users/minde/Ambiente de Trabalho/Proj SD/LAB/2/lab_2/lab_2.srcs/constrs_1/imports/Ambiente de Trabalho/Lab2_Constraints.xdc (Line: 12)
+Related violations: <none>
+
+XDCH-2#18 Warning
+Same min and max delay values on IO port  
+The same output delay of 0.000 ns has been defined on port 'dataOUT[15]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks *] 0.000 [get_ports * -filter { NAME =~  "*" && DIRECTION == "OUT" }]
+C:/Users/minde/Ambiente de Trabalho/Proj SD/LAB/2/lab_2/lab_2.srcs/constrs_1/imports/Ambiente de Trabalho/Lab2_Constraints.xdc (Line: 12)
+Related violations: <none>
+
+XDCH-2#19 Warning
+Same min and max delay values on IO port  
+The same output delay of 0.000 ns has been defined on port 'dataOUT[16]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks *] 0.000 [get_ports * -filter { NAME =~  "*" && DIRECTION == "OUT" }]
+C:/Users/minde/Ambiente de Trabalho/Proj SD/LAB/2/lab_2/lab_2.srcs/constrs_1/imports/Ambiente de Trabalho/Lab2_Constraints.xdc (Line: 12)
+Related violations: <none>
+
+XDCH-2#20 Warning
+Same min and max delay values on IO port  
+The same output delay of 0.000 ns has been defined on port 'dataOUT[17]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks *] 0.000 [get_ports * -filter { NAME =~  "*" && DIRECTION == "OUT" }]
+C:/Users/minde/Ambiente de Trabalho/Proj SD/LAB/2/lab_2/lab_2.srcs/constrs_1/imports/Ambiente de Trabalho/Lab2_Constraints.xdc (Line: 12)
+Related violations: <none>
+
+XDCH-2#21 Warning
+Same min and max delay values on IO port  
+The same output delay of 0.000 ns has been defined on port 'dataOUT[18]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks *] 0.000 [get_ports * -filter { NAME =~  "*" && DIRECTION == "OUT" }]
+C:/Users/minde/Ambiente de Trabalho/Proj SD/LAB/2/lab_2/lab_2.srcs/constrs_1/imports/Ambiente de Trabalho/Lab2_Constraints.xdc (Line: 12)
+Related violations: <none>
+
+XDCH-2#22 Warning
+Same min and max delay values on IO port  
+The same output delay of 0.000 ns has been defined on port 'dataOUT[19]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks *] 0.000 [get_ports * -filter { NAME =~  "*" && DIRECTION == "OUT" }]
+C:/Users/minde/Ambiente de Trabalho/Proj SD/LAB/2/lab_2/lab_2.srcs/constrs_1/imports/Ambiente de Trabalho/Lab2_Constraints.xdc (Line: 12)
+Related violations: <none>
+
+XDCH-2#23 Warning
+Same min and max delay values on IO port  
+The same output delay of 0.000 ns has been defined on port 'dataOUT[1]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks *] 0.000 [get_ports * -filter { NAME =~  "*" && DIRECTION == "OUT" }]
+C:/Users/minde/Ambiente de Trabalho/Proj SD/LAB/2/lab_2/lab_2.srcs/constrs_1/imports/Ambiente de Trabalho/Lab2_Constraints.xdc (Line: 12)
+Related violations: <none>
+
+XDCH-2#24 Warning
+Same min and max delay values on IO port  
+The same output delay of 0.000 ns has been defined on port 'dataOUT[20]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks *] 0.000 [get_ports * -filter { NAME =~  "*" && DIRECTION == "OUT" }]
+C:/Users/minde/Ambiente de Trabalho/Proj SD/LAB/2/lab_2/lab_2.srcs/constrs_1/imports/Ambiente de Trabalho/Lab2_Constraints.xdc (Line: 12)
+Related violations: <none>
+
+XDCH-2#25 Warning
+Same min and max delay values on IO port  
+The same output delay of 0.000 ns has been defined on port 'dataOUT[21]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks *] 0.000 [get_ports * -filter { NAME =~  "*" && DIRECTION == "OUT" }]
+C:/Users/minde/Ambiente de Trabalho/Proj SD/LAB/2/lab_2/lab_2.srcs/constrs_1/imports/Ambiente de Trabalho/Lab2_Constraints.xdc (Line: 12)
+Related violations: <none>
+
+XDCH-2#26 Warning
+Same min and max delay values on IO port  
+The same output delay of 0.000 ns has been defined on port 'dataOUT[22]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks *] 0.000 [get_ports * -filter { NAME =~  "*" && DIRECTION == "OUT" }]
+C:/Users/minde/Ambiente de Trabalho/Proj SD/LAB/2/lab_2/lab_2.srcs/constrs_1/imports/Ambiente de Trabalho/Lab2_Constraints.xdc (Line: 12)
+Related violations: <none>
+
+XDCH-2#27 Warning
+Same min and max delay values on IO port  
+The same output delay of 0.000 ns has been defined on port 'dataOUT[23]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks *] 0.000 [get_ports * -filter { NAME =~  "*" && DIRECTION == "OUT" }]
+C:/Users/minde/Ambiente de Trabalho/Proj SD/LAB/2/lab_2/lab_2.srcs/constrs_1/imports/Ambiente de Trabalho/Lab2_Constraints.xdc (Line: 12)
+Related violations: <none>
+
+XDCH-2#28 Warning
+Same min and max delay values on IO port  
+The same output delay of 0.000 ns has been defined on port 'dataOUT[24]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks *] 0.000 [get_ports * -filter { NAME =~  "*" && DIRECTION == "OUT" }]
+C:/Users/minde/Ambiente de Trabalho/Proj SD/LAB/2/lab_2/lab_2.srcs/constrs_1/imports/Ambiente de Trabalho/Lab2_Constraints.xdc (Line: 12)
+Related violations: <none>
+
+XDCH-2#29 Warning
+Same min and max delay values on IO port  
+The same output delay of 0.000 ns has been defined on port 'dataOUT[25]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks *] 0.000 [get_ports * -filter { NAME =~  "*" && DIRECTION == "OUT" }]
+C:/Users/minde/Ambiente de Trabalho/Proj SD/LAB/2/lab_2/lab_2.srcs/constrs_1/imports/Ambiente de Trabalho/Lab2_Constraints.xdc (Line: 12)
+Related violations: <none>
+
+XDCH-2#30 Warning
+Same min and max delay values on IO port  
+The same output delay of 0.000 ns has been defined on port 'dataOUT[26]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks *] 0.000 [get_ports * -filter { NAME =~  "*" && DIRECTION == "OUT" }]
+C:/Users/minde/Ambiente de Trabalho/Proj SD/LAB/2/lab_2/lab_2.srcs/constrs_1/imports/Ambiente de Trabalho/Lab2_Constraints.xdc (Line: 12)
+Related violations: <none>
+
+XDCH-2#31 Warning
+Same min and max delay values on IO port  
+The same output delay of 0.000 ns has been defined on port 'dataOUT[27]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks *] 0.000 [get_ports * -filter { NAME =~  "*" && DIRECTION == "OUT" }]
+C:/Users/minde/Ambiente de Trabalho/Proj SD/LAB/2/lab_2/lab_2.srcs/constrs_1/imports/Ambiente de Trabalho/Lab2_Constraints.xdc (Line: 12)
+Related violations: <none>
+
+XDCH-2#32 Warning
+Same min and max delay values on IO port  
+The same output delay of 0.000 ns has been defined on port 'dataOUT[28]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks *] 0.000 [get_ports * -filter { NAME =~  "*" && DIRECTION == "OUT" }]
+C:/Users/minde/Ambiente de Trabalho/Proj SD/LAB/2/lab_2/lab_2.srcs/constrs_1/imports/Ambiente de Trabalho/Lab2_Constraints.xdc (Line: 12)
+Related violations: <none>
+
+XDCH-2#33 Warning
+Same min and max delay values on IO port  
+The same output delay of 0.000 ns has been defined on port 'dataOUT[29]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks *] 0.000 [get_ports * -filter { NAME =~  "*" && DIRECTION == "OUT" }]
+C:/Users/minde/Ambiente de Trabalho/Proj SD/LAB/2/lab_2/lab_2.srcs/constrs_1/imports/Ambiente de Trabalho/Lab2_Constraints.xdc (Line: 12)
+Related violations: <none>
+
+XDCH-2#34 Warning
+Same min and max delay values on IO port  
+The same output delay of 0.000 ns has been defined on port 'dataOUT[2]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks *] 0.000 [get_ports * -filter { NAME =~  "*" && DIRECTION == "OUT" }]
+C:/Users/minde/Ambiente de Trabalho/Proj SD/LAB/2/lab_2/lab_2.srcs/constrs_1/imports/Ambiente de Trabalho/Lab2_Constraints.xdc (Line: 12)
+Related violations: <none>
+
+XDCH-2#35 Warning
+Same min and max delay values on IO port  
+The same output delay of 0.000 ns has been defined on port 'dataOUT[30]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks *] 0.000 [get_ports * -filter { NAME =~  "*" && DIRECTION == "OUT" }]
+C:/Users/minde/Ambiente de Trabalho/Proj SD/LAB/2/lab_2/lab_2.srcs/constrs_1/imports/Ambiente de Trabalho/Lab2_Constraints.xdc (Line: 12)
+Related violations: <none>
+
+XDCH-2#36 Warning
+Same min and max delay values on IO port  
+The same output delay of 0.000 ns has been defined on port 'dataOUT[31]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks *] 0.000 [get_ports * -filter { NAME =~  "*" && DIRECTION == "OUT" }]
+C:/Users/minde/Ambiente de Trabalho/Proj SD/LAB/2/lab_2/lab_2.srcs/constrs_1/imports/Ambiente de Trabalho/Lab2_Constraints.xdc (Line: 12)
+Related violations: <none>
+
+XDCH-2#37 Warning
+Same min and max delay values on IO port  
+The same output delay of 0.000 ns has been defined on port 'dataOUT[3]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks *] 0.000 [get_ports * -filter { NAME =~  "*" && DIRECTION == "OUT" }]
+C:/Users/minde/Ambiente de Trabalho/Proj SD/LAB/2/lab_2/lab_2.srcs/constrs_1/imports/Ambiente de Trabalho/Lab2_Constraints.xdc (Line: 12)
+Related violations: <none>
+
+XDCH-2#38 Warning
+Same min and max delay values on IO port  
+The same output delay of 0.000 ns has been defined on port 'dataOUT[4]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks *] 0.000 [get_ports * -filter { NAME =~  "*" && DIRECTION == "OUT" }]
+C:/Users/minde/Ambiente de Trabalho/Proj SD/LAB/2/lab_2/lab_2.srcs/constrs_1/imports/Ambiente de Trabalho/Lab2_Constraints.xdc (Line: 12)
+Related violations: <none>
+
+XDCH-2#39 Warning
+Same min and max delay values on IO port  
+The same output delay of 0.000 ns has been defined on port 'dataOUT[5]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks *] 0.000 [get_ports * -filter { NAME =~  "*" && DIRECTION == "OUT" }]
+C:/Users/minde/Ambiente de Trabalho/Proj SD/LAB/2/lab_2/lab_2.srcs/constrs_1/imports/Ambiente de Trabalho/Lab2_Constraints.xdc (Line: 12)
+Related violations: <none>
+
+XDCH-2#40 Warning
+Same min and max delay values on IO port  
+The same output delay of 0.000 ns has been defined on port 'dataOUT[6]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks *] 0.000 [get_ports * -filter { NAME =~  "*" && DIRECTION == "OUT" }]
+C:/Users/minde/Ambiente de Trabalho/Proj SD/LAB/2/lab_2/lab_2.srcs/constrs_1/imports/Ambiente de Trabalho/Lab2_Constraints.xdc (Line: 12)
+Related violations: <none>
+
+XDCH-2#41 Warning
+Same min and max delay values on IO port  
+The same output delay of 0.000 ns has been defined on port 'dataOUT[7]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks *] 0.000 [get_ports * -filter { NAME =~  "*" && DIRECTION == "OUT" }]
+C:/Users/minde/Ambiente de Trabalho/Proj SD/LAB/2/lab_2/lab_2.srcs/constrs_1/imports/Ambiente de Trabalho/Lab2_Constraints.xdc (Line: 12)
+Related violations: <none>
+
+XDCH-2#42 Warning
+Same min and max delay values on IO port  
+The same output delay of 0.000 ns has been defined on port 'dataOUT[8]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks *] 0.000 [get_ports * -filter { NAME =~  "*" && DIRECTION == "OUT" }]
+C:/Users/minde/Ambiente de Trabalho/Proj SD/LAB/2/lab_2/lab_2.srcs/constrs_1/imports/Ambiente de Trabalho/Lab2_Constraints.xdc (Line: 12)
+Related violations: <none>
+
+XDCH-2#43 Warning
+Same min and max delay values on IO port  
+The same output delay of 0.000 ns has been defined on port 'dataOUT[9]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks *] 0.000 [get_ports * -filter { NAME =~  "*" && DIRECTION == "OUT" }]
+C:/Users/minde/Ambiente de Trabalho/Proj SD/LAB/2/lab_2/lab_2.srcs/constrs_1/imports/Ambiente de Trabalho/Lab2_Constraints.xdc (Line: 12)
+Related violations: <none>
+
+XDCH-2#44 Warning
+Same min and max delay values on IO port  
+The same output delay of 0.000 ns has been defined on port 'done' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks *] 0.000 [get_ports * -filter { NAME =~  "*" && DIRECTION == "OUT" }]
+C:/Users/minde/Ambiente de Trabalho/Proj SD/LAB/2/lab_2/lab_2.srcs/constrs_1/imports/Ambiente de Trabalho/Lab2_Constraints.xdc (Line: 12)
+Related violations: <none>
+
+XDCH-2#45 Warning
+Same min and max delay values on IO port  
+The same output delay of 0.000 ns has been defined on port 'we' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks *] 0.000 [get_ports * -filter { NAME =~  "*" && DIRECTION == "OUT" }]
+C:/Users/minde/Ambiente de Trabalho/Proj SD/LAB/2/lab_2/lab_2.srcs/constrs_1/imports/Ambiente de Trabalho/Lab2_Constraints.xdc (Line: 12)
+Related violations: <none>
+
+

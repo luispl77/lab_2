@@ -98,11 +98,8 @@ begin
     -- multiplexer 6
     mux6 <= std_logic_vector(resize(signed(D_in),32)) when sel6 = "00" else
             R4                                        when sel6 = "01" else 
-            ("00" & R4(31 downto 2));
-
-
-
-
+            (R4(31) & R4(31) & R4(31 downto 2));
+    
 
     ------------ Multipliers
     -- multiplier 1
@@ -156,10 +153,6 @@ begin
                 R2 <= X"00000000";
                 R3 <= X"00000000";
                 R4 <= X"00000000";
-                Reg1 <= X"00000000";
-                Reg2 <= X"00000000";
-                Reg3 <= X"00000000";
-                Reg4 <= X"00000000";
             else
                 if en1 = '1' then
                     R1 <= std_logic_vector(mult1_res);
